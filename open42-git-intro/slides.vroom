@@ -52,7 +52,7 @@ Open42
     * efficient easy merging
     * fast
 
-----
+---- shell
 == Minimal local git 
 
  cd top-level-of-project
@@ -80,6 +80,7 @@ Open42
 
   * SVN stores trees of files
   * Git stores a series of patches that apply to a tree of files
+
 + * With enough metadata these are equivalent.  
   * In practice, merges are easier with the latter.
   * Theory of patches:
@@ -89,32 +90,34 @@ Open42
 == Things you should know.
 
 ----
-== Things you should know.
-== Repositories
+== Things you should know: Repositories
 
     SVN: one master remote repository.
     git: every copy of the project has a full repository,
          central master only by convention.
 
 ----
-== Things you should know.
-== URL
+== Things you should know: URL
+
     SVN: identifies location of the repo and the path within.
          user convention for branches, tags, sub-projects.
     git: identifies location of the repo.  Fixed locations inside
          for branches, tags.  On branch is default, generally 
          "master"
 
-----
-== Things you should know.
-== Revisions
-    SVN: marked with ids of decimal numbers growing monotonically
-    git: marked with SHA1 ids, 160 bit
-         HEAD, HEAD^, HEAD^^ shorthand for head, head-parent, head-parent-parent
++ You can't check out part of a git repository like you can with subversion.
 
 ----
-== Things you should know.
-== Commits
+== Things you should know: Revisions
+
+    SVN: marked with ids of decimal numbers growing monotonically
+    git: marked with SHA1 ids, 160 bit
++
+       * HEAD, HEAD^, HEAD^^ shorthand for head, head-parent, head-parent-parent
+       * git tool can work with a unique sub-string of revision id.
+
+----
+== Things you should know: Commits
 
     git: Each commit has an author and committer field to record who made the 
     change and who added it to the repository.  This helps with patches from email.
@@ -127,46 +130,67 @@ Open42
       git config --global user.email username@open42.com
 
 ----
-== Things you should know.
-== Commit Message
+== Things you should know: Commit Message
 
    By convention, the first line of the git message is a brief description of the patch
    This can be expanded in later paragraphs.  Many tools use the first line of the patch
    as a description.
 
    We should embed ticket number in the first line of commit message.
++
+   example:
+
+   [t:123] enable baz for bar when foo
+
+   * baz only makes sense if foo
+   * unit test expanded to check for non-sensical baz without foo case.
+
 ----
-== Things you should know.
-== Git Commands
+== Things you should know: Git Commands
 
   * Git commands are of the form "git command", 
     "git-command" is equivalent (and useful for man pages)
 ----
-== Things you should know.
-== Colors
+== Things you should know: Colors
   * disabled by default, enable with git config.
+    People who don't like colors are much louder when annoyed than
+    people who like colors.
 
    git config --global color.diff   auto
    git config --global color.status auto
    git config --global color.branch auto
 ----
 == Git Examples
-==
+
+
+
+
+== 
 ----
-== Git Examples
-== branch
+== Git Examples : branch
 
   git branch 
 ----
-== Git Examples
-== merge
+== Git Examples : merge
 
   git merge 
 ----
 == Git vs SVN Command Flow Comparison
-----
-== Git vs SVN Command Flow Comparison
-== SVN checkout from remote repo
+
+   SVN vs Git checkout from remote repository
+
+
+
+
+
+
+
+
+
+
+== 
+---- shell
+== SVN checkout from remote repository
 
  svn checkout REPO_URL LOCAL_DIR   # make local checkout
  cd LOCAL_DIR                      # cd to versioned directory
@@ -174,9 +198,14 @@ Open42
  svn stat                          # check status of files, modified
  svn diff                          # show diff from checkout
  svn commit                        # push all changes to the repo
-----
-== Git vs SVN Command Flow Comparison
-== Git checkout from remote repo
+
+
+
+
+
+== 
+---- shell
+== Git checkout from remote repository
 
  git clone REPO_URL LOCAL_DIR      # make local checkout
  cd LOCAL_DIR                      # cd to versioned directory
@@ -189,12 +218,32 @@ Open42
  git commit                        # commit changes to local repo
  git push origin master            # push local repo changes back to 
                                    # remote repo (origin) on branch (master)
+== 
+----
+== GitHub
+
+  * open42 organization 
+    http://github.com/open42
+
+  * plan is limited by private repositories (10).  Any number of users allowed.
+
+  * after you join, you will have a [Switch Context] button on your dashboard
+    to switch between open42 and public projects.
+
+  * clone URL looks like:
+    ssh:  git@github.com:open42/reponame.git
+    http: https://user@github.com/open42/reponame.git
+
 ----
 == Git SVN Crash course
   
   * Git-SVN crash course:
     http://git-scm.com/course/svn.html
 ----
-==
+== 
+
+== Questions?
+----
+== 
 
 == The End
