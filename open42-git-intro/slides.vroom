@@ -1,0 +1,200 @@
+# This is a sample Vroom input file. It should help you get started.
+#
+# Edit this file with your content. Then run `vroom --vroom` to start
+# the show!
+#
+# See `perldoc Vroom` for complete details.
+#
+---- config
+# Basic config options.
+title: Open42 Git Intro
+indent: 5
+height: 18
+width: 69
+skip: 0
+
+# The following options are for Gvim usage.
+# vim: gvim
+# gvimrc: |
+#   set fuopt=maxhorz,maxvert
+#   set guioptions=egmLtT
+#   set guifont=Bitstream_Vera_Sans_Mono:h18
+#   set guicursor=a:blinkon0-ver25-Cursor
+#   colorscheme default
+
+---- center
+
+Git Intro
+Open42
+
+
+2011-Mar-11
+
+----
+== Topics
+
+  * What is git?
+  * Minimal local git
+  * git model
+  * git vs svn
+    * changes
+    * command comparison
+  * remote git
+
+----
+== What is git?
+
+  Git is a distributed revision control system.
+  It was written for the needs of the linux kernel team:
+    * distributed offline users
+    * patches by email
+    * easy branching
+    * efficient easy merging
+    * fast
+
+----
+== Minimal local git 
+
+ cd top-level-of-project
+ git init                          # initialize local repository
+ touch new-file                    # create new file
+ git add new-file                  # stage file for commit
+ git commit                        # commit changes
+ git status                        # show modified and untracked files in repo
+ git add file1 file2 ...           # stage more files
+ git commit                        # commit more changes
+
+----
+== Git Model
+
+  * every copy is a complete repository
+  * central authoritative repository is only for convention
+  * Flow:
+    clone remote repository to local copy, 
+    make changes locally, 
+    push changes back to remote.
+
+----
+== Git vs SVN 
+== High-level overview
+
+  * SVN stores trees of files
+  * Git stores a series of patches that apply to a tree of files
++ * With enough metadata these are equivalent.  
+  * In practice, merges are easier with the latter.
+  * Theory of patches:
+    http://darcs.net/manual/node9.html
+----
+== Git vs SVN
+== Things you should know.
+
+----
+== Things you should know.
+== Repositories
+
+    SVN: one master remote repository.
+    git: every copy of the project has a full repository,
+         central master only by convention.
+
+----
+== Things you should know.
+== URL
+    SVN: identifies location of the repo and the path within.
+         user convention for branches, tags, sub-projects.
+    git: identifies location of the repo.  Fixed locations inside
+         for branches, tags.  On branch is default, generally 
+         "master"
+
+----
+== Things you should know.
+== Revisions
+    SVN: marked with ids of decimal numbers growing monotonically
+    git: marked with SHA1 ids, 160 bit
+         HEAD, HEAD^, HEAD^^ shorthand for head, head-parent, head-parent-parent
+
+----
+== Things you should know.
+== Commits
+
+    git: Each commit has an author and committer field to record who made the 
+    change and who added it to the repository.  This helps with patches from email.
+
+    check settings with
+      git config -l
+
+    set with:
+      git config --global user.name "Your Name"
+      git config --global user.email username@open42.com
+
+----
+== Things you should know.
+== Commit Message
+
+   By convention, the first line of the git message is a brief description of the patch
+   This can be expanded in later paragraphs.  Many tools use the first line of the patch
+   as a description.
+
+   We should embed ticket number in the first line of commit message.
+----
+== Things you should know.
+== Git Commands
+
+  * Git commands are of the form "git command", 
+    "git-command" is equivalent (and useful for man pages)
+----
+== Things you should know.
+== Colors
+  * disabled by default, enable with git config.
+
+   git config --global color.diff   auto
+   git config --global color.status auto
+   git config --global color.branch auto
+----
+== Git Examples
+==
+----
+== Git Examples
+== branch
+
+  git branch 
+----
+== Git Examples
+== merge
+
+  git merge 
+----
+== Git vs SVN Command Flow Comparison
+----
+== Git vs SVN Command Flow Comparison
+== SVN checkout from remote repo
+
+ svn checkout REPO_URL LOCAL_DIR   # make local checkout
+ cd LOCAL_DIR                      # cd to versioned directory
+ <modify files>
+ svn stat                          # check status of files, modified
+ svn diff                          # show diff from checkout
+ svn commit                        # push all changes to the repo
+----
+== Git vs SVN Command Flow Comparison
+== Git checkout from remote repo
+
+ git clone REPO_URL LOCAL_DIR      # make local checkout
+ cd LOCAL_DIR                      # cd to versioned directory
+ git pull                          # pull changes from remote repo
+ <modify files>
+ git status                        # check status of files, modified
+ git diff                          # show diff from checkout
+ git add                           # stage files for commit
+ git diff                          # staged changes are not listed
+ git commit                        # commit changes to local repo
+ git push origin master            # push local repo changes back to 
+                                   # remote repo (origin) on branch (master)
+----
+== Git SVN Crash course
+  
+  * Git-SVN crash course:
+    http://git-scm.com/course/svn.html
+----
+==
+
+== The End
