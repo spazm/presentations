@@ -1,0 +1,89 @@
+# This is a sample Vroom input file. It should help you get started.
+#
+# Edit this file with your content. Then run `vroom --vroom` to start
+# the show!
+#
+# See `perldoc Vroom` for complete details.
+#
+---- config
+# Basic config options.
+title:  Vroom!
+indent: 5
+height: 10
+width:  100
+skip:   0
+
+# vimrc override
+vimrc: |
+  let g:space_loaded = 1 "disable magic-space: space.vim
+  map <PAGEUP> :N<CR>:<CR>gg
+  map <PAGEDOWN> :n<CR>:<CR>gg
+
+# The following options are for Gvim usage.
+# vim: gvim
+# gvimrc: |
+#   set fuopt=maxhorz,maxvert
+#   set guioptions=egmLtT
+#   set guifont=Bitstream_Vera_Sans_Mono:h18
+#   set guicursor=a:blinkon0-ver25-Cursor
+#   colorscheme default
+
+---- center
+
+Chef Intro
+Open42
+
+2011-Mar-??
+
+----
+== Chef Topics
+
+* What is Chef?
++* Chef Model
+    * client/server
+    * cookbooks, recipies, providers
+    * run-lists
+    * roles
+    * databags
+    * repository
++* Knife: the chef tool
++* Examples
+    * ec2 commands
+    * server query
+----
+== What is Chef?
+----
+== Chef Model
+----
+
+== Chef Model: Client/server
+----
+
+== Chef Model: cookbooks
+----
+
+== Chef Model: recipies
+----
+
+== Chef Model: run-lists
+----
+
+== Chef Model: roles
+----
+
+== Chef Model: databags
+----
+
+== Chef Model: repository
+----
+
+== Knife : The Chef Tool
+----
+
+== Examples
+----
+
+== Examples: ec2 commands
+----
+
+== The End
