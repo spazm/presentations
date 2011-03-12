@@ -531,6 +531,14 @@ Git Examples
   $ git push origin master            # push changes to master branch at origin
                                       # no commit message here, the changes are
                                       # already named.
+  Counting objects: 15, done.
+  Delta compression using up to 8 threads.
+  Compressing objects: 100% (9/9), done.
+  Writing objects: 100% (12/12), 1.61 KiB, done.
+  Total 12 (delta 3), reused 0 (delta 0)
+  To git@github.com:spazm/presentations.git
+     9b36eb3..8eee1a3  master -> master
+
 ----
 == Further Reading
   
