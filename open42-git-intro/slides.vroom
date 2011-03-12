@@ -474,6 +474,13 @@ Git Examples
 
 
 == 
+---- shell
+== Git Examples: show and status
+
+   $ git show                # show patch and commit message
+   $ git status              # show modified files, untracked files, 
+                             # and staged files.
+
 ----
 == GitHub
 
