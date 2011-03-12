@@ -9,7 +9,7 @@
 # Basic config options.
 title: Open42 Git Intro
 indent: 5
-height: 18
+height: 10 
 width: 69
 skip: 0
 
@@ -26,6 +26,7 @@ vimrc: |
 
 ---- center
 
+
 Git Intro
 Open42
 
@@ -39,9 +40,30 @@ Open42
   * Minimal local git
   * git model
   * git vs svn
-    * changes
+  * git examples
+  * github
+  * further Reading
+
+----
+== Topics
+
+  * What is git?
+  * Minimal local git
+  * git model
+  * git vs svn
+    * overview
+    * things you should know
+    * flow comparison
     * command comparison
-  * remote git
+  * git examples
+    * branch and tag
+    * merge
+    * rebase
+    * bisect
+  * github
+  * further Reading
+    * git-v-svn crash course
+    * git user-manual
 
 ----
 == What is git?
@@ -247,7 +269,9 @@ Open42
                                    # remote repo (origin) on branch (master)
 == 
 ---- center
-== Git Examples
+
+
+Git Examples
 
 ---- shell
 == Git Examples : branching and tagging
@@ -267,7 +291,7 @@ Open42
                                    # create a new branch <new>, reference <start-point>, 
                                    # check it out.
 == 
-----
+---- shell
 == Git Examples : branching and tagging
 
   Show the tags with 'git tag -l'
@@ -297,7 +321,7 @@ Open42
 
 
 == 
-----
+---- shell
 == Git Examples : branching and tagging
 
   Create a branch from a tag and check it out:
@@ -364,7 +388,7 @@ Open42
 
   
 == 
-----
+---- shell
 == Git Examples : rebase
 
   used to migrate a merge to a series of linear patches.
@@ -379,7 +403,7 @@ Open42
   $ git commit
   ...
 
-----
+---- shell
 == Git Examples: rebase
 
   Since no merges, a simple linear sequence:
@@ -396,7 +420,7 @@ Open42
           a--b--c <-- mywork
 
 == 
-----
+---- shell
 == Git Examples: rebase
 
   You could pull in results with git pull to make a merge commit:
@@ -416,7 +440,7 @@ Open42
                      a'--b'--c' <-- mywork
 
 == 
-----
+---- shell
 == Git Examples: rebase
   If there are conflicts during the merge, fix them and use 'git add' to update the
   index with the changes.  Continue with 'git rebase --continue'
@@ -433,7 +457,7 @@ Open42
 
 
 == 
-----
+---- shell
 == Git Examples: bisect
 
   Used to identify the history point where code changes lead to failure.
@@ -466,15 +490,22 @@ Open42
     http: https://user@github.com/open42/reponame.git
 
 ----
-== Git SVN Crash course
+== Further Reading
   
   * Git-SVN crash course:
     http://git-scm.com/course/svn.html
-----
-== 
 
-== Questions?
-----
-== 
+  * Git User Manual:
+    http://www.kernel.org/pub/software/scm/git/docs/user-manual.html
 
-== The End
+  * Links at github for github specifics and git general.
+
+---- center
+
+
+Questions?
+---- center
+
+
+The End
+---- center
