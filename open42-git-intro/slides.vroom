@@ -505,7 +505,7 @@ Git Examples
   $ cd <existing_git_repo>
   $ git remote add origin git@github.com:spazm/presentations.git
   $ git push -u origin master
-
++
   Counting objects: 32, done.
   Delta compression using up to 8 threads.
   Compressing objects: 100% (21/21), done.
@@ -514,7 +514,17 @@ Git Examples
   To git@github.com:spazm/presentations.git
    * [new branch]      master -> master
   Branch master set up to track remote branch master from origin.
+---- shell
+== GitHub : push local repo to github
 
+  * make local changes, commit locally, push back to origin.
+
+  <change files ... >
+  $ git add file1 file2 file3 ...     # stage changes
+  $ git commit -m "new files"         # commit files to local branch
+  $ git push origin master            # push changes to master branch at origin
+
+----
 == Further Reading
   
   * Git-SVN crash course:
