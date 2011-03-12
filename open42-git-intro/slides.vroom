@@ -522,8 +522,15 @@ Git Examples
   <change files ... >
   $ git add file1 file2 file3 ...     # stage changes
   $ git commit -m "new files"         # commit files to local branch
-  $ git push origin master            # push changes to master branch at origin
+  $ git status                        # show status
+  # On branch master
+  # Your branch is ahead of 'origin/master' by 3 commits.
+  #
+  nothing to commit (working directory clean)
 
+  $ git push origin master            # push changes to master branch at origin
+                                      # no commit message here, the changes are
+                                      # already named.
 ----
 == Further Reading
   
