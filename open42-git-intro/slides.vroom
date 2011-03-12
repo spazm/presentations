@@ -496,7 +496,25 @@ Git Examples
     ssh:  git@github.com:open42/reponame.git
     http: https://user@github.com/open42/reponame.git
 
-----
+---- shell
+== GitHub : push local repo to github
+
+  * Create new project in github gui
+  * add remote and push.
+
+  $ cd <existing_git_repo>
+  $ git remote add origin git@github.com:spazm/presentations.git
+  $ git push -u origin master
+
+  Counting objects: 32, done.
+  Delta compression using up to 8 threads.
+  Compressing objects: 100% (21/21), done.
+  Writing objects: 100% (32/32), 6.86 KiB, done.
+  Total 32 (delta 5), reused 0 (delta 0)
+  To git@github.com:spazm/presentations.git
+   * [new branch]      master -> master
+  Branch master set up to track remote branch master from origin.
+
 == Further Reading
   
   * Git-SVN crash course:
