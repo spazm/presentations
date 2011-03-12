@@ -21,6 +21,8 @@ skip: 0
 #   set guifont=Bitstream_Vera_Sans_Mono:h18
 #   set guicursor=a:blinkon0-ver25-Cursor
 #   colorscheme default
+vimrc: |
+  let g:space_loaded = 1 "disable magic-space: space.vim
 
 ---- center
 
@@ -93,6 +95,7 @@ Open42
 == Things you should know: Repositories
 
     SVN: one master remote repository.
+
     git: every copy of the project has a full repository,
          central master only by convention.
 
@@ -101,6 +104,7 @@ Open42
 
     SVN: identifies location of the repo and the path within.
          user convention for branches, tags, sub-projects.
+
     git: identifies location of the repo.  Fixed locations inside
          for branches, tags.  On branch is default, generally 
          "master"
@@ -108,15 +112,25 @@ Open42
 + You can't check out part of a git repository like you can with subversion.
 
 ----
+
 == Things you should know: Revisions
 
     SVN: marked with ids of decimal numbers growing monotonically
+
     git: marked with SHA1 ids, 160 bit
 +
        * HEAD, HEAD^, HEAD^^ shorthand for head, head-parent, head-parent-parent
+         * can keep adding ^^^ mark to go farther up the chain
        * git tool can work with a unique sub-string of revision id.
+       
+       * gitk is a curses viewer of commit history.
+         $ aptitude install gitk
 
+
+
+== 
 ----
+
 == Things you should know: Commits
 
     git: Each commit has an author and committer field to record who made the 
@@ -125,11 +139,16 @@ Open42
     check settings with
       git config -l
 
+
     set with:
       git config --global user.name "Your Name"
       git config --global user.email username@open42.com
 
+
+
+== 
 ----
+
 == Things you should know: Commit Message
 
    By convention, the first line of the git message is a brief description of the patch
@@ -139,19 +158,35 @@ Open42
    We should embed ticket number in the first line of commit message.
 +
    example:
+     [t:123] enable baz for bar when foo
 
-   [t:123] enable baz for bar when foo
+     * baz only makes sense if foo
+     * unit test expanded to check for non-sensical baz without foo case.
 
-   * baz only makes sense if foo
-   * unit test expanded to check for non-sensical baz without foo case.
 
+== 
 ----
+
 == Things you should know: Git Commands
 
   * Git commands are of the form "git command", 
     "git-command" is equivalent (and useful for man pages)
+
+
+
+
+
+
+
+
+
+
+
+== 
 ----
+
 == Things you should know: Colors
+
   * disabled by default, enable with git config.
     People who don't like colors are much louder when annoyed than
     people who like colors.
@@ -159,21 +194,13 @@ Open42
    git config --global color.diff   auto
    git config --global color.status auto
    git config --global color.branch auto
-----
-== Git Examples
+
+
 
 
 
 
 == 
-----
-== Git Examples : branch
-
-  git branch 
-----
-== Git Examples : merge
-
-  git merge 
 ----
 == Git vs SVN Command Flow Comparison
 
@@ -218,6 +245,210 @@ Open42
  git commit                        # commit changes to local repo
  git push origin master            # push local repo changes back to 
                                    # remote repo (origin) on branch (master)
+== 
+---- center
+== Git Examples
+
+---- shell
+== Git Examples : branching and tagging
+
+  Show the branches with 'git branch'
+  $ git branch                     # display branches
+  * master                         # current branch is marked with *
+
+  Create branch with 'git branch <branch>' or 'git branch <branch> <start-point>'
+  start-point can be a branch name or tag name.
+  
+  $ git branch new-branch-name     # create new branch 'new-branch-name'
+
+  $ git checkout <branch>          # make the current branch <branch>, updating working dir
+
+  $ git checkout -b <new> <start-point> 
+                                   # create a new branch <new>, reference <start-point>, 
+                                   # check it out.
+== 
+----
+== Git Examples : branching and tagging
+
+  Show the tags with 'git tag -l'
+
+  $ git tag -l                     # display branches
+  v2.1                             # the current tags
+  v2.2
+  v2.3-rc1
+  ...
+
+
+
+
+== 
+----
+== Git Examples : branching and tagging
+
+
+  tags vs branches:
+
+  Tags are expected to always point to the same revision of a project
+  while head on branch is expected to advance.
+
+
+
+
+
+
+== 
+----
+== Git Examples : branching and tagging
+
+  Create a branch from a tag and check it out:
+  $ git checkout -b new v2.1       # create the branch, check it out
+  $ git branch                     # list the branches
+    master                         # master
+  * new                            # new branch is selected
+
+  Used to show current branches and to create branches.
+
+  $ git branch                     # display branches
+  * master                         # current branch is marked with *
+
+== 
+
+---- shell
+== Git Examples : branching and tagging
+
+  remote branches:
+
+  $ git branch                     # show local branches
+  * master
+
+  $ git branch -r                  # show remote tracking branches
+  origin/HEAD -> origin/master     
+  origin/master
+
+  # make a local branch 'my-todo-copy' from remote origin/todo
+  $ git checkout -b my-todo-copy origin/todo 
+
+
+== 
+---- shell
+== Git Examples : merge
+
+  merge without conflicts: 
+
+  $ git merge branchname          # merge 'branchname' into current branch.
+
+  If no conflicts, this will merge branchname into current branch 
+  *and* commit.
+
+
+
+
+
+
+
+== 
+---- shell
+== Git Examples : merge
+
+  merge with conflicts: 
+
+  $ git merge branchname          # merge 'branchname' into current branch.
+    100% (4/4) done
+  Auto-merged file.txt
+  CONFLICT (content): Merge conflict in file.txt
+  Automatic merge failed; fix conflicts and then commit the result.
+
+  At this point there will be conflict markers.  Fix the conflicts
+  and then git commit as normal.
+
+
+  
+== 
+----
+== Git Examples : rebase
+
+  used to migrate a merge to a series of linear patches.
+
+  Suppose that you create a branch "mywork" on a remote-tracking branch "origin", 
+  and create some commits on top of it:
+
+  $ git checkout -b mywork origin
+  $ vi file.txt
+  $ git commit
+  $ vi otherfile.txt
+  $ git commit
+  ...
+
+----
+== Git Examples: rebase
+
+  Since no merges, a simple linear sequence:
+
+  o--o--O <-- origin
+         \
+          a--b--c <-- mywork
+
++ 
+  Add interesting work upstream on origin:
+
+  o--o--O--o--o--o <-- origin
+         \
+          a--b--c <-- mywork
+
+== 
+----
+== Git Examples: rebase
+
+  You could pull in results with git pull to make a merge commit:
+
+  o--o--O--o--o--o <-- origin
+         \        \
+          a--b--c--m <-- mywork
+
+  But, you can keep your history a series of simple commits with no merge
+  by rebasing:
+
+  $ git checkout mywork
+  $ git rebase origin
+
+    o--o--O--o--o--o <-- origin
+                    \
+                     a'--b'--c' <-- mywork
+
+== 
+----
+== Git Examples: rebase
+  If there are conflicts during the merge, fix them and use 'git add' to update the
+  index with the changes.  Continue with 'git rebase --continue'
+
+  $ git checkout mywork
+  $ git rebase origin
+  # ... fix conflicts
+  $ git add <fixed-conflict-files>
+  $ cit rebase --continue
+
+  Abort the process with 'git rebase --abort' to return to original mywork branch.
+
+
+
+
+== 
+----
+== Git Examples: bisect
+
+  Used to identify the history point where code changes lead to failure.
+
+  $ git bisect start
+  $ git bisect bad           # mark current version as bad
+  $ git bisect good v2.6.13  # last known good version
+  Bisecting: 675 revisions left to test after this.
+                             # test here, then:
+  $ git bisect good          # if this rev is good, or
+  $ git bisect bad           # if this rev is bad.
+                             # repeat until done.
+
+
+
 == 
 ----
 == GitHub
