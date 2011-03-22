@@ -41,6 +41,8 @@ Open42
 * What is Chef?
 +* Chef Model
     * client/server
+      * node initialization
+      * privileges
     * cookbooks, recipies, providers
     * run-lists
     * roles
@@ -56,7 +58,130 @@ Open42
 == Chef Model
 ----
 
-== Chef Model: Client/server
+== Chef Model: Server
+
+* client pull 
+* collects metadata about client nodes
+* interface to client metadata
+* interface to recipe metadata
+* interfaces:
+  * port 4000 : api requests from clients
+  * port 4040 : http UI for examining/modifying metadata
+
+----
+
+== Chef Model: Client
+
+A client is an entitiy that is allowed to talk to the chef server.
+
+* created with 'knife client create'
+* created by chef-client during bootstrap
+* authenticates via private-key
+  * default /etc/chef/client.pem + node_name
+  * override client_key and node_name 
+    in /etc/chef/client.rb or .chef/knife.rb 
+* has name, public_key, admin bool
+
+----
+
+== Chef Model: Node
+
+A Node is an client instance that is managed by Chef.
+
+* has a run-list containing recipies and roles to apply
+* has metadata defined on server (via knife)
+* has metadata about current system status (collected via ohai)
+  * installed chef packages, recipies, roles
+  * stats on: kernel rev, cpu flags, os, virtualization, uptime, name, fqdn, 
+    ip, filesystem, memory, installed languages, users, groups, ...
+  
+---- json
+
+% knife client show lemur
+
+---- include raw/knife_client_show_lemur
+
+---- json
+
+% knife node show lemur
+
+---- include raw/knife_node_show_lemur
+
+----
+
+== Chef Model: Client/server : bootstrapping
+
+* Bootstrap
+  * shared-private validation.pem
+    chef-client will create client certificate from shared key
+    /etc/chef/client.pem , /etc/chef/client.rb
+
++  * how?
+    * local checkout of chef-repo to get validation.pem
+    * knife bootstrap of new instance from authorized client.
+
+---- shell
+
+== Chef Model: Client/server : bootstrapping
+
+# via ec2 initialization:
+% knife ec2 server create [RUN LIST...] (options)
+
+* creates new ec2 server
+* connects to new server via ssh to bootstrap
+* bootstraps the new server with a base 'chef-client' install, 
+  includes validation.pem.
+* initializes client run-list with command line [RUN LIST...] arguments
+* first run of chef-client creates client.pem and registers new client
+  with chef server
+
+* uses 'knife bootstrap'
+
+---- shell
+
+== Chef Model: Client/server : bootstrapping
+Should be possible to run bootstrap with knife bootstrap. 
+
+% knife bootstrap FQDN [RUN LIST...] (options)
+
+---- shell
+
+== Chef Model: Client/server : bootstrapping
+
+% knife bootstrap --help                                                                                                                        10 ~
+knife bootstrap FQDN [RUN LIST...] (options)
+    -N, --node-name NAME             The Chef node name for your new node
+    -s, --server-url URL             Chef Server URL
+    -k, --key KEY                    API Client Key
+    -c, --config CONFIG              The configuration file to use
+        --defaults                   Accept default values for all questions
+    -d, --distro DISTRO              Bootstrap a distro using a template
+    -e, --editor EDITOR              Set the editor to use for interactive commands
+    -F, --format FORMAT              Which format to use for output
+    -i IDENTITY_FILE                 The SSH identity file used for authentication
+        --identity-file
+    -l, --log_level LEVEL            Set the log level (debug, info, warn, error, fatal)
+    -L, --logfile LOGLOCATION        Set the log file location, defaults to STDOUT
+    -n, --no-editor                  Do not open EDITOR, just accept the data as is
+    -u, --user USER                  API Client Username
+        --prerelease                 Install the pre-release chef gems
+    -p, --print-after                Show the data after a destructive operation
+    -r, --run-list RUN_LIST          Comma separated list of roles/recipes to apply
+    -P, --ssh-password PASSWORD      The ssh password
+    -x, --ssh-user USERNAME          The ssh username
+        --template-file TEMPLATE     Full path to location of template to use
+        --sudo                       Execute the bootstrap via sudo
+    -v, --version                    Show chef version
+    -y, --yes                        Say yes to all prompts for confirmation
+    -h, --help                       Show this message
+
+
+----
+
+== Chef Model: Client/server : privileges
+
+* Nodes and clients authenticate via node_name + client certificate
+* 
 ----
 
 == Chef Model: cookbooks

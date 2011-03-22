@@ -1,0 +1,8 @@
+{
+  "public_key": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEAvt2sJi84NzF3TVhykYKFer5dxK1EhB5o8Kqzl6OLZn3V2x0v43b3\nt4hgf7vhjIRsqFIJx3ndf/qVbhffo74V2VjQkRX2fTG//uneY/s9O0rW3H9eVCoY\nbnnqHUoTlsdOpMN3d6vdJUYTDkTgUiDzPE4GIaK2anvHpPxiLvrlWx1BzaGtlF+9\nJarwihWsXoCMuFRFGXGHb7EDNGfQhk8QgLPYW7Gutlm60sLl7VAX2wCojOroNX27\nopYv37kh5Wp2Nr6SFqom673gkyeFAhx8MAG79dI2HTYGgH6xhqQ5v3ZwxCVvn90l\ns7RFb0vf6uDNcQzUvtCYR1IQRW34asID5QIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+  "name": "lemur",
+  "_rev": "2-d63bbde0b8a45a8aa50219934e6af425",
+  "json_class": "Chef::ApiClient",
+  "admin": true,
+  "chef_type": "client"
+}
