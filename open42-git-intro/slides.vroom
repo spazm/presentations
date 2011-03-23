@@ -449,7 +449,7 @@ Git Examples
   $ git rebase origin
   # ... fix conflicts
   $ git add <fixed-conflict-files>
-  $ cit rebase --continue
+  $ git rebase --continue
 
   Abort the process with 'git rebase --abort' to return to original mywork branch.
 
