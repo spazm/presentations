@@ -1,0 +1,78 @@
+# This is a sample Vroom input file. It should help you get started.
+#
+# Edit this file with your content. Then run `vroom --vroom` to start
+# the show!
+#
+# See `perldoc Vroom` for complete details.
+#
+---- config
+# Basic config options.
+title: Vroom!
+indent: 5
+height: 18
+width: 69
+skip: 0
+
+# The following options are for Gvim usage.
+# vim: gvim
+# gvimrc: |
+#   set fuopt=maxhorz,maxvert
+#   set guioptions=egmLtT
+#   set guifont=Bitstream_Vera_Sans_Mono:h18
+#   set guicursor=a:blinkon0-ver25-Cursor
+#   colorscheme default
+
+---- center
+
+Workflow management with 
+Class::Workflow and Class::Workflow::YAML
+
+----
+== What do we mean, 'a workflow?'
+
+* Essentially, a workflow is a state-machine describing a business process
+* Lots of MBA buzzwords thrown in to confuse
+
+----
+== CPAN options
+
+* Class::Workflow
+
+
+
+* Workflow
+
+
+
+== 
+----
+== CPAN options
+
+* Class::Workflow
+  * Moosey
+  * YAML version in Class::Workflow::YAML 
+
+* Workflow
+  * Predates Class::Workflow, heavy use of XML for configuration
+  * Recent updates show the project is still around?
+
+== 
+----
+== Class::Workflow
+
+NAME
+   Class::Workflow - Light weight workflow system.
+
+SYNOPSIS
+   use Class::Workflow;
+   ...
+
+DESCRIPTION
+   Workflow systems let you build a state machine, with transitions between states.
+
+INSTANCES
+   On the implementation side, the core idea is that every "item" in the system (in
+   our example, a bug) has a workflow instance. This instance represents the
+   current position of the item in the workflow, along with history data (how did
+   it get here).
+----
