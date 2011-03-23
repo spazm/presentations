@@ -13,12 +13,6 @@ height: 10
 width:  100
 skip:   0
 
-# vimrc override
-vimrc: |
-  let g:space_loaded = 1 "disable magic-space: space.vim
-  map <PAGEUP> :N<CR>:<CR>gg
-  map <PAGEDOWN> :n<CR>:<CR>gg
-
 # The following options are for Gvim usage.
 # vim: gvim
 # gvimrc: |
