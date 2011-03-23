@@ -33,6 +33,20 @@ Class::Workflow and Class::Workflow::YAML
 * Essentially, a workflow is a state-machine describing a business process
 * Lots of MBA buzzwords thrown in to confuse
 
++* AKA a flowchart.
+
+----
+== What's the point?
+
+* applicable to many business problems.
+  * encapsulate the business decisions and transition side-effects.
+
+* plan for this talk was a webapp with a Class::Workflow backend,
+  still trying to get the C::W part working.
+  * modify workflow to change the app.
+
+* there are roughly zero examples out there of either Workflow or 
+  Class::Workflow
 ----
 == CPAN options
 
@@ -76,3 +90,115 @@ INSTANCES
    current position of the item in the workflow, along with history data (how did
    it get here).
 ----
+== Nomenclature / Class Diagram
+
+* workflow
+  Top level object describing the state-diagram
+
+* workflow-instance
+  workflow plus state for this particular $thing flowing through the workflow
+  purely functional, must manually replace old state with new state
+
+* transition
+  describes and encapsulates a transition between states
+    * update context (user callback data)
+    * validation
+    * triggers
+---- perl
+== pseudo code
+
+#create a workflow
+my $wf            = Class::Workflow->new();
+$wf->state( name => ... , transitions => ... ); #[...]
+
+my $wi            = $wf->new_instance(%params);
+my $c             = Class::Workflow::Context->new();
+
+#change state 
+my $current_state = $wi->state;
+my $accept        = $current_state->get_transition('accept');
+my $wi_accepted   = $accept->apply($wi, $c);
+
+#update workflow instance $wi.
+$wi               = $wi_accepted;
+
+----
+== Bug Tracker
+
+* Canonical Example: a bug tracker
+
+---- perl
+== Nomenclature Example
+
+package MyBug;
+use Moose;
+
+has workflow_instance => (
+    does => "Class::Workflow::Instance", # or a more restrictive constraint
+    is   => "rw",
+);
+
+sub accept {
+   my ( $bug, $current_user ) = @_;
+
+   my $wi = $bug->workflow_instance;
+   my $current_state = $wi->state;
+
+   my $accept = $current_state->get_transition( "accept" )
+       or croak "There's no 'accept' transition in the current state";
+
+   my $c = MyWorkflowContext->new( user => $current_user );
+   my $wi_accepted = $accept->apply( $wi, $c );
+
+   $bug->workflow_instance( $wi_accepted );
+}
+---- perl
+system( qw( perldoc raw/perldoc_class_workflow.pod ));
+----
+== Create Workflow
+----
+== Create Workflow with Class::Workflow::YAML
+----
+== Is Class::Workflow::YAML useful beyond prototyping stage?
+
+* perl in yaml is a bit unwieldy for anything more complex than "setuser" example
+* validation code in yaml? That seems like a testing nightmare.
+---- yaml
+---- include lavaflow/yaml/workflow.yml
+
+---- perl
+---- include lavaflow/t/workflow_yaml.t
+----
+== Example projects
+
+1 Candidate Screening / Hiring
+  * new candidate
+  * approve resume -> send pre-interview questions
+  * approve pre-interview questions -> schedule phone screen
+  * approve phone screen -> schedule in person interview
+  * approve -> send offer
+  Various decline, waffle options along the way
+  track who approved, who interviewed
+  recruiter can enter candidate and send them straight to pre-interview questions
+  require privs to approve resume, phone screen and in person screening
+
+  change workflow to remove phone screen, or add additional path.
+
+----
+== Example projects
+
+2. link aggregator
+ * push links sent to you to aggregator (push emails, have it pull twitter, etc)
+ * states: 
+   unviewed -> tag, later, view, delete, share
+   viewed   -> comment, keep, archive, delete, share
+   archived -> delete, share
+
+----
+
+== Questions?
+
+----
+
+== The End
+
