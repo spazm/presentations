@@ -56,7 +56,7 @@ Open42
 
 * client pull 
 * collects metadata about client nodes
-* interface to client metadata
+* interface to client metadata (search)
 * interface to recipe metadata
 * interfaces:
   * port 4000 : api requests from clients
@@ -168,17 +168,38 @@ knife bootstrap FQDN [RUN LIST...] (options)
     -v, --version                    Show chef version
     -y, --yes                        Say yes to all prompts for confirmation
     -h, --help                       Show this message
-
-
 ----
 
 == Chef Model: Client/server : privileges
 
 * Nodes and clients authenticate via node_name + client certificate
-* 
+* Node creates client certificate signed by master certificate 
+  (/etc/chef/validation.pem) and pushes to chef server on first run
+  of chef-client
+* clients have an admin flag.  Normal non-admin users have admin=false.
+* non-admin users can only query for information about their own entity
+* admin users can query and update information (show clients, modify run-lists)
+* if you have the key and client name, you can impersonate the client/node.
+  * keep track of your admin user(s) certificate(s)!
+
 ----
 
 == Chef Model: cookbooks
+
+* "unit of sharing"
+* standard bundle in chef. contains:
+  * README.*    
+  * metadata.rb/.json 
+  * attributes/  configuration attributes
+  * definitions/
+  * files/ 
+  * libraries/
+  * recipies/    one or more recipies, default is recipies/default.rb
+  * resources/   (light weight resource providers)
+  * providers/   (light weight resource providers)
+  * templates/   erb template files 
+
+  * lwrp/
 ----
 
 == Chef Model: recipies
