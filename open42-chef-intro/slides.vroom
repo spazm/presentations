@@ -14,13 +14,13 @@ width:  100
 skip:   0
 
 # The following options are for Gvim usage.
-# vim: gvim
-# gvimrc: |
-#   set fuopt=maxhorz,maxvert
-#   set guioptions=egmLtT
-#   set guifont=Bitstream_Vera_Sans_Mono:h18
-#   set guicursor=a:blinkon0-ver25-Cursor
-#   colorscheme default
+vim: gvim
+gvimrc: |
+  set fuopt=maxhorz,maxvert
+  set guioptions=egmLtT
+  set guifont=Bitstream_Vera_Sans_Mono:h18
+  set guicursor=a:blinkon0-ver25-Cursor
+  colorscheme default
 
 ---- center
 
@@ -172,7 +172,6 @@ knife bootstrap FQDN [RUN LIST...] (options)
 
 == Chef Model: Client/server : privileges
 
-* Nodes and clients authenticate via node_name + client certificate
 * Node creates client certificate signed by master certificate 
   (/etc/chef/validation.pem) and pushes to chef server on first run
   of chef-client
@@ -180,8 +179,9 @@ knife bootstrap FQDN [RUN LIST...] (options)
 * non-admin users can only query for information about their own entity
 * admin users can query and update information (show clients, modify run-lists)
 * if you have the key and client name, you can impersonate the client/node.
+  * no passphrases on client certificates
   * keep track of your admin user(s) certificate(s)!
-
+  * can invalidate lost certificates on the server.
 ----
 
 == Chef Model: cookbooks
