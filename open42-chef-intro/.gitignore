@@ -1,5 +1,6 @@
 .help
 .vimrc
+.gvimrc
 0*
 *.swp
 html/
