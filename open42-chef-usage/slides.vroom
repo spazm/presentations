@@ -1,0 +1,99 @@
+# This is a sample Vroom input file. It should help you get started.
+#
+# Edit this file with your content. Then run `vroom --vroom` to start
+# the show!
+#
+# See `perldoc Vroom` for complete details.
+#
+---- config
+# Basic config options.
+title:  Vroom!
+indent: 5
+height: 10
+width:  100
+skip:   0
+
+# The following options are for Gvim usage.
+vim: gvim
+gvimrc: |
+  set fuopt=maxhorz,maxvert
+  set guioptions=egmLtT
+  set guifont=Envy_Code_R:h25
+  set guicursor=a:blinkon0-ver25-Cursor
+  colorscheme darkblue
+
+---- center
+
+Chef Usage
+Open42
+
+2011-Mar-30
+
+----
+* Configuring packages -- cookbooks
+* Configuring nodes    -- roles & recipies
+
+----
+== Configuring packages
+
+Use cookbook to install and configure a 3rd party package
+
+Cookbook:
+* recipie to request resource
+* templates for creating configuration files
+* attributes to set default values for configuration items
+
+----
+== Example: iptables
+
+metadata:
+    metadata.rb
+    metadata.json
+
+files:
+    files/default/rebuild-iptables
+
+definitions:
+    definitions/iptables_rule.rb
+
+recipies:
+    recipes/default.rb
+
+templates:
+    templates/default/all_established.erb
+    templates/default/all_icmp.erb
+
+---- ruby
+==           iptables/metadata.rb
+
+---- include iptables/metadata.rb
+
+---- json
+==           iptables/metadata.json
+
+---- include iptables/metadata.json
+
+---- perl
+==           iptables/files/default/rebuild-iptables
+
+---- include iptables/files/default/rebuild-iptables
+
+---- ruby
+==           iptables/definitions/iptables_rule.rb
+
+---- include iptables/definitions/iptables_rule.rb
+
+---- ruby
+==           iptables/recipes/default.rb
+
+---- include iptables/recipes/default.rb
+
+---- ruby
+==           iptables/templates/default/all_established.erb
+
+---- include iptables/templates/default/all_established.erb
+
+==           iptables/templates/default/all_icmp.erb
+
+---- include iptables/templates/default/all_icmp.erb
+----
