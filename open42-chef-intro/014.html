@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>014</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "013.sh" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "015" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                               Chef Model: Client/server : privileges
+     
+     * Node creates client certificate signed by master certificate 
+       (/etc/chef/validation.pem) and pushes to chef server on first run
+       of chef-client
+     * clients have an admin flag.  Normal non-admin users have admin=false.
+     * non-admin users can only query for information about their own entity
+     * admin users can query and update information (show clients, modify run-lists)
+     * if you have the key and client name, you can impersonate the client/node.
+       * no passphrases on client certificates
+       * keep track of your admin user(s) certificate(s)!
+       * can invalidate lost certificates on the server.
+</pre>
+</body>

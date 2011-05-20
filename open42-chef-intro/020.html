@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>020</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "019.rb" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "021" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                      Chef Model: definitions
+     
+     &quot;Definitions allow you to create reusable collections of one or more Resources.&quot;
+     http://wiki.opscode.com/display/chef/Definitions
+     
+     * define new functions/sugar for the DSL 
+     * chain together multiple resources 
+     * Definitions are not resources:
+         They are replaced by the resources they contain. 
+         You cannot notify a definition to take an action 
+         - you can only notify the resources it creates.
+     * see apache example where 'apache_site' is defined.
+     * Want definition if:
+         You are repeating a pattern of resources
+         You do not want to send actions directly to this resource 
+         - i.e., you never need to notify it
+</pre>
+</body>

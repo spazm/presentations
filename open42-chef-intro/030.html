@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>030</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "029" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "031.rb" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                       Chef Model: templates
+     
+     &quot;A template is a file that has been marked up to include variables (or more complex logic) 
+      using Erubis (.erb)&quot;
+     http://wiki.opscode.com/display/chef/Templates
+     
+     * Used &quot;all the time&quot;
+     * utilize by adding a 'template' resource to a 'recipe'.
+     * template location specificity
+       * subdirs of template are compared against host and uname
+     * Variables
+       * all variables listed in the 'resources variables attribute' are passed to template
+       * contents of 'node|Nodes' passed to template
+       * accessible as instance variables within the template.
+     * ERB templates
+       &lt;%= ... %&gt;
+       http://www.kuwata-lab.com/erubis/users-guide.html
+</pre>
+</body>

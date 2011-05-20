@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>028</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "027.rb" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "029" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                       Chef Model: providers
+     
+     Providers take a resource, compare that resource to the current state of the part 
+     of the system it is managing, and then takes the Action specified in the resource.
+     They are the way that Chef supports multiple platforms with a single Resource.
+     
+     http://wiki.opscode.com/display/chef/Providers
+     
+     * heavy lifting to configure resources, based on the platform of the node. 
+     * idempotent actions to configure a resource as it is declared in the recipe.
+     * generally written by the Chef team.  
+       * build your own using LWRP (Light Weight Resources and Providers)
+</pre>
+</body>

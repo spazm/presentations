@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>023</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "022" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "024" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                        Chef Model: recipies
+     &quot;Recipes are the fundamental configuration in Chef. 
+      Recipes encapsulate collections of resources which are 
+      executed in the order defined to configure the system&quot;
+     http://wiki.opscode.com/display/chef/Recipes
+     
+     Basic Rules:
+       0. Recipes are stored in Cookbooks.
+       1. executed in the order they appear.
+       2. evaluated as Ruby code on the node, to find resources to execute. 
+       3. Recipes from other Cookbooks can be included with include_recipe.
+       4. All the attributes of the current Node are available via the node object.
+       5. namespaced by cookbook::recipie
+</pre>
+</body>

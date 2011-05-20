@@ -1,0 +1,2219 @@
+<html>
+<head>
+<title>009.json</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "008.json" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "010" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>     % knife node show lemur
+     
+     {
+       &quot;normal&quot;: {
+         &quot;jenkins&quot;: {
+           &quot;server&quot;: {
+             &quot;pubkey&quot;: &quot;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCwXeiwuEJ8UyMCAGKfNcotSHTRtBNvU+7s6k7/u3bZ4cXz4Gih6DgI8naClFCz3niOgOzkl6NTGDCJa4HmLyVn58+UkAkXUef3ZAnpZjN8Fj56Kbmxpmla+QaRbrPUGxW2fiheaTBviM9MFuQEndpAElu4gQnYiptFoXwh7AZqlab7Z0ZeNeUGfbyLSJp4KWyI9RQxb7aZviUc/DQMu5tWCgPjI6eyoEqE0zZQb1L7cujD96hTWQKZ7qEw7KJlft9195wjT9sJBjmMO+wsRsqX8kx/z+yFJt/6jIJtBtxcyNDEOeMiuibQq6hkH+F27fw0UKS8Kw+zMANMzjj6np+7 jenkins@lemur\n&quot;
+           }
+         },
+         &quot;runit&quot;: {
+           &quot;chpst_bin&quot;: &quot;/usr/bin/chpst&quot;,
+           &quot;sv_bin&quot;: &quot;/usr/bin/sv&quot;,
+           &quot;service_dir&quot;: &quot;/etc/service&quot;,
+           &quot;sv_dir&quot;: &quot;/etc/sv&quot;
+         },
+         &quot;java&quot;: {
+           &quot;java_home&quot;: &quot;/usr/lib/jvm/default-java&quot;
+         },
+         &quot;tags&quot;: [
+     
+         ]
+       },
+       &quot;name&quot;: &quot;lemur&quot;,
+       &quot;override&quot;: {
+       },
+       &quot;default&quot;: {
+         &quot;java&quot;: {
+           &quot;install_flavor&quot;: &quot;sun&quot;
+         }
+       },
+       &quot;json_class&quot;: &quot;Chef::Node&quot;,
+       &quot;automatic&quot;: {
+         &quot;keys&quot;: {
+           &quot;ssh&quot;: {
+             &quot;host_dsa_public&quot;: &quot;AAAAB3NzaC1kc3MAAACBAJQS0nJAZKVof2ZIn/errgN4eGR5Z9CixOwV3JsW1mfZ043giKfjP17akFHqk3R0l3E/0/qj+NW/Dz9sHdefpPk4pzNHMpr1vPsg9gTtI/TZB1KZaQ1DigwmdZHGtSGWyS2YGBNBVhABXr6Qeo5zWwl2yt/vvhsnFghZpesWBCgLAAAAFQC/kJcBYJQPfTw+9FXsIuC95lVgowAAAIBZ1HTVnfjARTozdF6pQGRlbG0nVX6F/DUFiOrM8FM02pB5JJRepzLLI66s0V7ZrPR9AjN/2HOQ8KXjTLrHxohYeqFfm+AbJusYXQ4TRDAHL212WPYGTXhfoQFnyg9NoAiaf3L5RHVdJjItu3LJcaAsIzRIwjJkya+T9NpquMUVXwAAAIBB+oHxL/018IP0evSdFU48RGsU2TN+c3tDc8uyDNo60Z1TCJBYiwUKVu2uZD1kuCc/4IkjGm5sKMuYd8bBDWzJwIlgCwfw2e48qVFF8i+olsRCrBSSea+m6DcUDxf+2NyElhYUbRZb7woHJiwUpQHmhttryFUhk1mZdnfvExCZbw==&quot;,
+             &quot;host_rsa_public&quot;: &quot;AAAAB3NzaC1yc2EAAAADAQABAAABAQC00kndznDoPiYE+hZPZaTkk7ItEtiOj+XS5758qfU+mteFE4ub2KcT+8FoiA0AyvDUKdnquIBSXzJ3B8dqlGaOEaIBKdsowVPdj9j5otYMMit38fTmsJdSf0lg7QwDS6uXk1bR+jLPgerlFLcmokniwyqht7IL8V+RoRF1Z2tH9I/p2V7RhsyamAcNtSDtzXJaBus+UO64gSa67fZSVF95gxw5kydfmgs/3RTXf6VCux3yUk8An6c3jOIZ378zVCrOWyihScrM1+cEUWaztTI0xY/9qpRC4Vyv5CRG9zCjRPvTfRnNliv+crm2YFjwyGkdF8fwC0VD/bH9tDnCag2j&quot;
+           }
+         },
+         &quot;dmi&quot;: {
+           &quot;bios&quot;: {
+             &quot;version&quot;: &quot;A05&quot;,
+             &quot;release_date&quot;: &quot;07/08/2010&quot;,
+             &quot;vendor&quot;: &quot;Dell Inc.&quot;
+           },
+           &quot;baseboard&quot;: {
+             &quot;serial_number&quot;: &quot;..CN736040AM029Y.&quot;,
+             &quot;asset_tag&quot;: &quot;&quot;,
+             &quot;version&quot;: &quot;A00&quot;,
+             &quot;manufacturer&quot;: &quot;Dell Inc.&quot;,
+             &quot;product_name&quot;: &quot;0G3HR7&quot;
+           },
+           &quot;system&quot;: {
+             &quot;serial_number&quot;: &quot;C3N6PN1&quot;,
+             &quot;uuid&quot;: &quot;44454C4C-3300-104E-8036-C3C04F504E31&quot;,
+             &quot;version&quot;: &quot;Not Specified&quot;,
+             &quot;manufacturer&quot;: &quot;Dell Inc.&quot;,
+             &quot;product_name&quot;: &quot;Studio XPS 8100&quot;
+           },
+           &quot;version&quot;: &quot;2.9&quot;,
+           &quot;chassis&quot;: {
+             &quot;serial_number&quot;: &quot;C3N6PN1&quot;,
+             &quot;asset_tag&quot;: &quot;Not Specified&quot;,
+             &quot;type&quot;: &quot;Desktop&quot;,
+             &quot;version&quot;: &quot;Not Specified&quot;,
+             &quot;manufacturer&quot;: &quot;Dell Inc.&quot;
+           },
+           &quot;processor&quot;: {
+             &quot;family&quot;: &quot;Other&quot;,
+             &quot;version&quot;: &quot;Intel(R) Core(TM) i7 CPU         870  @ 2.93GHz&quot;,
+             &quot;manufacturer&quot;: &quot;Intel&quot;,
+             &quot;frequency&quot;: &quot;2933 MHz&quot;
+           }
+         },
+         &quot;kernel&quot;: {
+           &quot;modules&quot;: {
+             &quot;crc_itu_t&quot;: {
+               &quot;size&quot;: &quot;1739&quot;,
+               &quot;refcount&quot;: &quot;1&quot;
+             },
+             &quot;tg3&quot;: {
+               &quot;size&quot;: &quot;135768&quot;,
+               &quot;refcount&quot;: &quot;0&quot;
+             },
+             &quot;usbhid&quot;: {
+               &quot;size&quot;: &quot;42030&quot;,
+               &quot;refcount&quot;: &quot;0&quot;
+             },
+             &quot;snd_seq&quot;: {
+               &quot;size&quot;: &quot;57512&quot;,
+               &quot;refcount&quot;: &quot;2&quot;
+             },
+             &quot;aes_generic&quot;: {
+               &quot;size&quot;: &quot;27631&quot;,
+               &quot;refcount&quot;: &quot;1&quot;
+             },
+             &quot;cryptd&quot;: {
+               &quot;size&quot;: &quot;8140&quot;,
+               &quot;refcount&quot;: &quot;0&quot;
+             },
+             &quot;snd_seq_device&quot;: {
+               &quot;size&quot;: &quot;6912&quot;,
+               &quot;refcount&quot;: &quot;3&quot;
+             },
+             &quot;ppdev&quot;: {
+               &quot;size&quot;: &quot;6804&quot;,
+               &quot;refcount&quot;: &quot;0&quot;
+             },
+             &quot;xt_state&quot;: {
+               &quot;size&quot;: &quot;1386&quot;,
+               &quot;refcount&quot;: &quot;1&quot;
+             },
+             &quot;firewire_core&quot;: {
+               &quot;size&quot;: &quot;54327&quot;,
+               &quot;refcount&quot;: &quot;1&quot;
+             },
+             &quot;firewire_ohci&quot;: {
+               &quot;size&quot;: &quot;24839&quot;,
+               &quot;refcount&quot;: &quot;0&quot;
+             },
+             &quot;hid&quot;: {
+               &quot;size&quot;: &quot;84710&quot;,
+               &quot;refcount&quot;: &quot;1&quot;
+             },
+             &quot;ath9k_common&quot;: {
+               &quot;size&quot;: &quot;6874&quot;,
+               &quot;refcount&quot;: &quot;1&quot;
+             },
+             &quot;snd_seq_midi&quot;: {
+               &quot;size&quot;: &quot;5932&quot;,
+               &quot;refcount&quot;: &quot;0&quot;
+             },
+             &quot;snd_hda_codec_intelhdmi&quot;: {
+               &quot;size&quot;: &quot;11032&quot;,
+               &quot;refcount&quot;: &quot;1&quot;
+             },
+             &quot;snd_hda_codec_atihdmi&quot;: {
+               &quot;size&quot;: &quot;3079&quot;,
+               &quot;refcount&quot;: &quot;1&quot;
+             },
+             &quot;aes_x86_64&quot;: {
+               &quot;size&quot;: &quot;7936&quot;,
+               &quot;refcount&quot;: &quot;0&quot;
+             },
+             &quot;x_tables&quot;: {
+               &quot;size&quot;: &quot;24423&quot;,
+               &quot;refcount&quot;: &quot;5&quot;
+             },
+             &quot;nf_defrag_ipv4&quot;: {
+               &quot;size&quot;: &quot;1569&quot;,
+               &quot;refcount&quot;: &quot;1&quot;
+             },
+             &quot;xt_tcpudp&quot;: {
+               &quot;size&quot;: &quot;2627&quot;,
+               &quot;refcount&quot;: &quot;2&quot;
+             },
+             &quot;lp&quot;: {
+               &quot;size&quot;: &quot;10201&quot;,
+               &quot;refcount&quot;: &quot;0&quot;
+             },
+             &quot;cfg80211&quot;: {
+               &quot;size&quot;: &quot;170485&quot;,
+               &quot;refcount&quot;: &quot;4&quot;
+             },
+             &quot;mac80211&quot;: {
+               &quot;size&quot;: &quot;267099&quot;,
+               &quot;refcount&quot;: &quot;2&quot;
+             },
+             &quot;soundcore&quot;: {
+               &quot;size&quot;: &quot;1240&quot;,
+               &quot;refcount&quot;: &quot;1&quot;
+             },
+             &quot;snd_hda_codec_realtek&quot;: {
+               &quot;size&quot;: &quot;300173&quot;,
+               &quot;refcount&quot;: &quot;1&quot;
+             },
+             &quot;parport_pc&quot;: {
+               &quot;size&quot;: &quot;30086&quot;,
+               &quot;refcount&quot;: &quot;0&quot;
+             },
+             &quot;binfmt_misc&quot;: {
+               &quot;size&quot;: &quot;7984&quot;,
+               &quot;refcount&quot;: &quot;1&quot;
+             },
+             &quot;nf_conntrack_ipv4&quot;: {
+               &quot;size&quot;: &quot;13143&quot;,
+               &quot;refcount&quot;: &quot;1&quot;
+             },
+             &quot;ahci&quot;: {
+               &quot;size&quot;: &quot;22210&quot;,
+               &quot;refcount&quot;: &quot;2&quot;
+             },
+             &quot;parport&quot;: {
+               &quot;size&quot;: &quot;37032&quot;,
+               &quot;refcount&quot;: &quot;3&quot;
+             },
+             &quot;dcdbas&quot;: {
+               &quot;size&quot;: &quot;6910&quot;,
+               &quot;refcount&quot;: &quot;0&quot;
+             },
+             &quot;led_class&quot;: {
+               &quot;size&quot;: &quot;3393&quot;,
+               &quot;refcount&quot;: &quot;1&quot;
+             },
+             &quot;serio_raw&quot;: {
+               &quot;size&quot;: &quot;4910&quot;,
+               &quot;refcount&quot;: &quot;0&quot;
+             },
+             &quot;psmouse&quot;: {
+               &quot;size&quot;: &quot;62080&quot;,
+               &quot;refcount&quot;: &quot;0&quot;
+             },
+             &quot;snd_pcm&quot;: {
+               &quot;size&quot;: &quot;89104&quot;,
+               &quot;refcount&quot;: &quot;3&quot;
+             },
+             &quot;arc4&quot;: {
+               &quot;size&quot;: &quot;1497&quot;,
+               &quot;refcount&quot;: &quot;2&quot;
+             },
+             &quot;nf_conntrack&quot;: {
+               &quot;size&quot;: &quot;75238&quot;,
+               &quot;refcount&quot;: &quot;2&quot;
+             },
+             &quot;ath9k&quot;: {
+               &quot;size&quot;: &quot;101858&quot;,
+               &quot;refcount&quot;: &quot;0&quot;
+             },
+             &quot;snd_seq_midi_event&quot;: {
+               &quot;size&quot;: &quot;7291&quot;,
+               &quot;refcount&quot;: &quot;1&quot;
+             },
+             &quot;ip_tables&quot;: {
+               &quot;size&quot;: &quot;19139&quot;,
+               &quot;refcount&quot;: &quot;1&quot;
+             },
+             &quot;iptable_filter&quot;: {
+               &quot;size&quot;: &quot;1778&quot;,
+               &quot;refcount&quot;: &quot;1&quot;
+             },
+             &quot;sparse_keymap&quot;: {
+               &quot;size&quot;: &quot;3837&quot;,
+               &quot;refcount&quot;: &quot;1&quot;
+             },
+             &quot;snd_timer&quot;: {
+               &quot;size&quot;: &quot;23850&quot;,
+               &quot;refcount&quot;: &quot;2&quot;
+             },
+             &quot;snd_hda_intel&quot;: {
+               &quot;size&quot;: &quot;26147&quot;,
+               &quot;refcount&quot;: &quot;4&quot;
+             },
+             &quot;ipt_REJECT&quot;: {
+               &quot;size&quot;: &quot;2440&quot;,
+               &quot;refcount&quot;: &quot;2&quot;
+             },
+             &quot;libahci&quot;: {
+               &quot;size&quot;: &quot;26148&quot;,
+               &quot;refcount&quot;: &quot;1&quot;
+             },
+             &quot;usb_storage&quot;: {
+               &quot;size&quot;: &quot;50436&quot;,
+               &quot;refcount&quot;: &quot;0&quot;
+             },
+             &quot;snd_page_alloc&quot;: {
+               &quot;size&quot;: &quot;8588&quot;,
+               &quot;refcount&quot;: &quot;2&quot;
+             },
+             &quot;snd&quot;: {
+               &quot;size&quot;: &quot;64181&quot;,
+               &quot;refcount&quot;: &quot;16&quot;
+             },
+             &quot;ath9k_hw&quot;: {
+               &quot;size&quot;: &quot;314731&quot;,
+               &quot;refcount&quot;: &quot;2&quot;
+             },
+             &quot;dell_wmi_aio&quot;: {
+               &quot;size&quot;: &quot;1682&quot;,
+               &quot;refcount&quot;: &quot;0&quot;
+             },
+             &quot;ath&quot;: {
+               &quot;size&quot;: &quot;10413&quot;,
+               &quot;refcount&quot;: &quot;2&quot;
+             },
+             &quot;fglrx&quot;: {
+               &quot;size&quot;: &quot;2523725&quot;,
+               &quot;refcount&quot;: &quot;286&quot;
+             },
+             &quot;snd_rawmidi&quot;: {
+               &quot;size&quot;: &quot;22207&quot;,
+               &quot;refcount&quot;: &quot;1&quot;
+             },
+             &quot;snd_hwdep&quot;: {
+               &quot;size&quot;: &quot;6660&quot;,
+               &quot;refcount&quot;: &quot;1&quot;
+             },
+             &quot;snd_hda_codec&quot;: {
+               &quot;size&quot;: &quot;100951&quot;,
+               &quot;refcount&quot;: &quot;4&quot;
+             }
+           },
+           &quot;machine&quot;: &quot;x86_64&quot;,
+           &quot;name&quot;: &quot;Linux&quot;,
+           &quot;os&quot;: &quot;GNU/Linux&quot;,
+           &quot;version&quot;: &quot;#48-Ubuntu SMP Tue Feb 22 20:25:46 UTC 2011&quot;,
+           &quot;release&quot;: &quot;2.6.35-27-generic&quot;
+         },
+         &quot;platform_version&quot;: &quot;10.10&quot;,
+         &quot;fqdn&quot;: &quot;lemur&quot;,
+         &quot;filesystem&quot;: {
+           &quot;gvfs-fuse-daemon&quot;: {
+             &quot;mount_options&quot;: [
+               &quot;rw&quot;,
+               &quot;nosuid&quot;,
+               &quot;nodev&quot;,
+               &quot;user=andrew&quot;
+             ],
+             &quot;fs_type&quot;: &quot;fuse.gvfs-fuse-daemon&quot;,
+             &quot;mount&quot;: &quot;/home/andrew/.gvfs&quot;
+           },
+           &quot;proc&quot;: {
+             &quot;mount_options&quot;: [
+               &quot;rw&quot;,
+               &quot;noexec&quot;,
+               &quot;nosuid&quot;,
+               &quot;nodev&quot;
+             ],
+             &quot;fs_type&quot;: &quot;proc&quot;,
+             &quot;mount&quot;: &quot;/proc&quot;
+           },
+           &quot;none&quot;: {
+             &quot;kb_size&quot;: &quot;613904464&quot;,
+             &quot;kb_available&quot;: &quot;542460788&quot;,
+             &quot;mount_options&quot;: [
+               &quot;rw&quot;,
+               &quot;relatime&quot;
+             ],
+             &quot;fs_type&quot;: &quot;debugfs&quot;,
+             &quot;mount&quot;: &quot;/var/lib/ureadahead/debugfs&quot;,
+             &quot;percent_used&quot;: &quot;7%&quot;,
+             &quot;kb_used&quot;: &quot;40259088&quot;
+           },
+           &quot;binfmt_misc&quot;: {
+             &quot;mount_options&quot;: [
+               &quot;rw&quot;,
+               &quot;noexec&quot;,
+               &quot;nosuid&quot;,
+               &quot;nodev&quot;
+             ],
+             &quot;fs_type&quot;: &quot;binfmt_misc&quot;,
+             &quot;mount&quot;: &quot;/proc/sys/fs/binfmt_misc&quot;
+           },
+           &quot;/dev/sda5&quot;: {
+             &quot;kb_size&quot;: &quot;613904464&quot;,
+             &quot;kb_available&quot;: &quot;542460788&quot;,
+             &quot;mount_options&quot;: [
+               &quot;rw&quot;,
+               &quot;errors=remount-ro&quot;,
+               &quot;user_xattr&quot;,
+               &quot;commit=0&quot;
+             ],
+             &quot;fs_type&quot;: &quot;ext4&quot;,
+             &quot;mount&quot;: &quot;/&quot;,
+             &quot;percent_used&quot;: &quot;7%&quot;,
+             &quot;kb_used&quot;: &quot;40259088&quot;
+           },
+           &quot;fusectl&quot;: {
+             &quot;mount_options&quot;: [
+               &quot;rw&quot;
+             ],
+             &quot;fs_type&quot;: &quot;fusectl&quot;,
+             &quot;mount&quot;: &quot;/sys/fs/fuse/connections&quot;
+           }
+         },
+         &quot;command&quot;: {
+           &quot;ps&quot;: &quot;ps -ef&quot;
+         },
+         &quot;ipaddress&quot;: &quot;10.1.1.126&quot;,
+         &quot;memory&quot;: {
+           &quot;dirty&quot;: &quot;176kB&quot;,
+           &quot;vmalloc_used&quot;: &quot;342244kB&quot;,
+           &quot;page_tables&quot;: &quot;78536kB&quot;,
+           &quot;buffers&quot;: &quot;188164kB&quot;,
+           &quot;slab_unreclaim&quot;: &quot;45452kB&quot;,
+           &quot;vmalloc_chunk&quot;: &quot;34359393564kB&quot;,
+           &quot;nfs_unstable&quot;: &quot;0kB&quot;,
+           &quot;slab&quot;: &quot;230848kB&quot;,
+           &quot;inactive&quot;: &quot;1554784kB&quot;,
+           &quot;total&quot;: &quot;8154272kB&quot;,
+           &quot;vmalloc_total&quot;: &quot;34359738367kB&quot;,
+           &quot;free&quot;: &quot;156992kB&quot;,
+           &quot;commit_limit&quot;: &quot;27965004kB&quot;,
+           &quot;anon_pages&quot;: &quot;5653384kB&quot;,
+           &quot;writeback&quot;: &quot;0kB&quot;,
+           &quot;cached&quot;: &quot;1222556kB&quot;,
+           &quot;swap&quot;: {
+             &quot;total&quot;: &quot;23887868kB&quot;,
+             &quot;free&quot;: &quot;23807656kB&quot;,
+             &quot;cached&quot;: &quot;7500kB&quot;
+           },
+           &quot;committed_as&quot;: &quot;10196512kB&quot;,
+           &quot;bounce&quot;: &quot;0kB&quot;,
+           &quot;slab_reclaimable&quot;: &quot;185396kB&quot;,
+           &quot;mapped&quot;: &quot;380596kB&quot;,
+           &quot;active&quot;: &quot;5515448kB&quot;
+         },
+         &quot;idletime_seconds&quot;: 8269906,
+         &quot;counters&quot;: {
+           &quot;network&quot;: {
+             &quot;interfaces&quot;: {
+               &quot;lo&quot;: {
+                 &quot;tx&quot;: {
+                   &quot;bytes&quot;: &quot;575676336&quot;,
+                   &quot;packets&quot;: &quot;240766&quot;,
+                   &quot;collisions&quot;: &quot;0&quot;,
+                   &quot;queuelen&quot;: &quot;0&quot;,
+                   &quot;errors&quot;: &quot;0&quot;,
+                   &quot;carrier&quot;: &quot;0&quot;,
+                   &quot;overrun&quot;: &quot;0&quot;,
+                   &quot;drop&quot;: &quot;0&quot;
+                 },
+                 &quot;rx&quot;: {
+                   &quot;bytes&quot;: &quot;575676336&quot;,
+                   &quot;packets&quot;: &quot;240766&quot;,
+                   &quot;errors&quot;: &quot;0&quot;,
+                   &quot;overrun&quot;: &quot;0&quot;,
+                   &quot;drop&quot;: &quot;0&quot;,
+                   &quot;frame&quot;: &quot;0&quot;
+                 }
+               },
+               &quot;eth0&quot;: {
+                 &quot;tx&quot;: {
+                   &quot;bytes&quot;: &quot;0&quot;,
+                   &quot;packets&quot;: &quot;0&quot;,
+                   &quot;collisions&quot;: &quot;0&quot;,
+                   &quot;queuelen&quot;: &quot;1000&quot;,
+                   &quot;errors&quot;: &quot;0&quot;,
+                   &quot;carrier&quot;: &quot;0&quot;,
+                   &quot;overrun&quot;: &quot;0&quot;,
+                   &quot;drop&quot;: &quot;0&quot;
+                 },
+                 &quot;rx&quot;: {
+                   &quot;bytes&quot;: &quot;0&quot;,
+                   &quot;packets&quot;: &quot;0&quot;,
+                   &quot;errors&quot;: &quot;0&quot;,
+                   &quot;overrun&quot;: &quot;0&quot;,
+                   &quot;drop&quot;: &quot;0&quot;,
+                   &quot;frame&quot;: &quot;0&quot;
+                 }
+               },
+               &quot;wlan0&quot;: {
+                 &quot;tx&quot;: {
+                   &quot;bytes&quot;: &quot;2465440832&quot;,
+                   &quot;packets&quot;: &quot;3189451&quot;,
+                   &quot;collisions&quot;: &quot;0&quot;,
+                   &quot;queuelen&quot;: &quot;1000&quot;,
+                   &quot;errors&quot;: &quot;0&quot;,
+                   &quot;carrier&quot;: &quot;0&quot;,
+                   &quot;overrun&quot;: &quot;0&quot;,
+                   &quot;drop&quot;: &quot;0&quot;
+                 },
+                 &quot;rx&quot;: {
+                   &quot;bytes&quot;: &quot;861190676&quot;,
+                   &quot;packets&quot;: &quot;2944318&quot;,
+                   &quot;errors&quot;: &quot;0&quot;,
+                   &quot;overrun&quot;: &quot;0&quot;,
+                   &quot;drop&quot;: &quot;0&quot;,
+                   &quot;frame&quot;: &quot;0&quot;
+                 }
+               }
+             }
+           }
+         },
+         &quot;domain&quot;: null,
+         &quot;os&quot;: &quot;linux&quot;,
+         &quot;idletime&quot;: &quot;95 days 17 hours 11 minutes 46 seconds&quot;,
+         &quot;virtualization&quot;: {
+         },
+         &quot;lsb&quot;: {
+           &quot;codename&quot;: &quot;maverick&quot;,
+           &quot;id&quot;: &quot;Ubuntu&quot;,
+           &quot;description&quot;: &quot;\&quot;Ubuntu 10.10\&quot;&quot;,
+           &quot;release&quot;: &quot;10.10&quot;
+         },
+         &quot;network&quot;: {
+           &quot;default_interface&quot;: &quot;wlan0&quot;,
+           &quot;interfaces&quot;: {
+             &quot;lo&quot;: {
+               &quot;flags&quot;: [
+                 &quot;UP&quot;,
+                 &quot;LOOPBACK&quot;,
+                 &quot;RUNNING&quot;
+               ],
+               &quot;addresses&quot;: {
+                 &quot;::1&quot;: {
+                   &quot;scope&quot;: &quot;Node&quot;,
+                   &quot;prefixlen&quot;: &quot;128&quot;,
+                   &quot;family&quot;: &quot;inet6&quot;
+                 },
+                 &quot;127.0.0.1&quot;: {
+                   &quot;netmask&quot;: &quot;255.0.0.0&quot;,
+                   &quot;family&quot;: &quot;inet&quot;
+                 }
+               },
+               &quot;mtu&quot;: &quot;16436&quot;,
+               &quot;encapsulation&quot;: &quot;Loopback&quot;
+             },
+             &quot;eth0&quot;: {
+               &quot;flags&quot;: [
+                 &quot;UP&quot;,
+                 &quot;BROADCAST&quot;,
+                 &quot;MULTICAST&quot;
+               ],
+               &quot;number&quot;: &quot;0&quot;,
+               &quot;addresses&quot;: {
+                 &quot;84:2b:2b:b6:b0:f3&quot;: {
+                   &quot;family&quot;: &quot;lladdr&quot;
+                 }
+               },
+               &quot;mtu&quot;: &quot;1500&quot;,
+               &quot;type&quot;: &quot;eth&quot;,
+               &quot;encapsulation&quot;: &quot;Ethernet&quot;
+             },
+             &quot;wlan0&quot;: {
+               &quot;flags&quot;: [
+                 &quot;UP&quot;,
+                 &quot;BROADCAST&quot;,
+                 &quot;RUNNING&quot;,
+                 &quot;MULTICAST&quot;
+               ],
+               &quot;number&quot;: &quot;0&quot;,
+               &quot;addresses&quot;: {
+                 &quot;10.1.1.126&quot;: {
+                   &quot;netmask&quot;: &quot;255.255.255.0&quot;,
+                   &quot;broadcast&quot;: &quot;10.1.1.255&quot;,
+                   &quot;family&quot;: &quot;inet&quot;
+                 },
+                 &quot;fe80::c2cb:38ff:fe59:3a54&quot;: {
+                   &quot;scope&quot;: &quot;Link&quot;,
+                   &quot;prefixlen&quot;: &quot;64&quot;,
+                   &quot;family&quot;: &quot;inet6&quot;
+                 },
+                 &quot;c0:cb:38:59:3a:54&quot;: {
+                   &quot;family&quot;: &quot;lladdr&quot;
+                 }
+               },
+               &quot;mtu&quot;: &quot;1500&quot;,
+               &quot;type&quot;: &quot;wlan&quot;,
+               &quot;arp&quot;: {
+                 &quot;10.1.1.1&quot;: &quot;00:1d:7e:bb:a0:50&quot;
+               },
+               &quot;encapsulation&quot;: &quot;Ethernet&quot;
+             }
+           }
+         },
+         &quot;ohai_time&quot;: 1300754642.51912,
+         &quot;current_user&quot;: null,
+         &quot;chef_packages&quot;: {
+           &quot;ohai&quot;: {
+             &quot;version&quot;: &quot;0.5.8&quot;
+           },
+           &quot;chef&quot;: {
+             &quot;version&quot;: &quot;0.9.14&quot;
+           }
+         },
+         &quot;recipes&quot;: [
+           &quot;java&quot;,
+           &quot;hadoop&quot;
+         ],
+         &quot;os_version&quot;: &quot;2.6.35-27-generic&quot;,
+         &quot;languages&quot;: {
+           &quot;c&quot;: {
+             &quot;sunpro&quot;: {
+               &quot;version&quot;: &quot;to&quot;,
+               &quot;description&quot;: &quot;cc: error trying to exec 'x86_64-linux-gnu-gcc--flags': execvp: No such file or directory&quot;
+             },
+             &quot;glibc&quot;: {
+               &quot;version&quot;: &quot;2.12.1&quot;,
+               &quot;description&quot;: &quot;GNU C Library (Ubuntu EGLIBC 2.12.1-0ubuntu10.2) stable release version 2.12.1, by Roland McGrath et al.&quot;
+             },
+             &quot;gcc&quot;: {
+               &quot;version&quot;: &quot;4.4.5&quot;,
+               &quot;description&quot;: &quot;gcc version 4.4.5 (Ubuntu/Linaro 4.4.4-14ubuntu5) &quot;
+             }
+           },
+           &quot;mono&quot;: {
+             &quot;version&quot;: &quot;2.6.7&quot;,
+             &quot;builddate&quot;: &quot;2.6.7-3ubuntu1) Copyright (C) &quot;
+           },
+           &quot;java&quot;: {
+             &quot;version&quot;: &quot;1.6.0_20&quot;
+           },
+           &quot;python&quot;: {
+             &quot;version&quot;: &quot;2.6.6&quot;,
+             &quot;builddate&quot;: &quot;Sep 15 2010, 16:22:56&quot;
+           },
+           &quot;perl&quot;: {
+             &quot;version&quot;: &quot;5.10.1&quot;,
+             &quot;archname&quot;: &quot;x86_64-linux-gnu-thread-multi&quot;
+           },
+           &quot;ruby&quot;: {
+             &quot;target_os&quot;: &quot;linux&quot;,
+             &quot;bin_dir&quot;: &quot;/usr/bin&quot;,
+             &quot;host_vendor&quot;: &quot;pc&quot;,
+             &quot;target_vendor&quot;: &quot;pc&quot;,
+             &quot;target_cpu&quot;: &quot;x86_64&quot;,
+             &quot;ruby_bin&quot;: &quot;/usr/bin/ruby1.8&quot;,
+             &quot;version&quot;: &quot;1.8.7&quot;,
+             &quot;host_os&quot;: &quot;linux-gnu&quot;,
+             &quot;release_date&quot;: &quot;2010-06-23&quot;,
+             &quot;host&quot;: &quot;x86_64-pc-linux-gnu&quot;,
+             &quot;host_cpu&quot;: &quot;x86_64&quot;,
+             &quot;target&quot;: &quot;x86_64-pc-linux-gnu&quot;,
+             &quot;gems_dir&quot;: &quot;/var/lib/gems/1.8&quot;,
+             &quot;platform&quot;: &quot;x86_64-linux&quot;
+           }
+         },
+         &quot;cpu&quot;: {
+           &quot;6&quot;: {
+             &quot;flags&quot;: [
+               &quot;fpu&quot;,
+               &quot;vme&quot;,
+               &quot;de&quot;,
+               &quot;pse&quot;,
+               &quot;tsc&quot;,
+               &quot;msr&quot;,
+               &quot;pae&quot;,
+               &quot;mce&quot;,
+               &quot;cx8&quot;,
+               &quot;apic&quot;,
+               &quot;sep&quot;,
+               &quot;mtrr&quot;,
+               &quot;pge&quot;,
+               &quot;mca&quot;,
+               &quot;cmov&quot;,
+               &quot;pat&quot;,
+               &quot;pse36&quot;,
+               &quot;clflush&quot;,
+               &quot;dts&quot;,
+               &quot;acpi&quot;,
+               &quot;mmx&quot;,
+               &quot;fxsr&quot;,
+               &quot;sse&quot;,
+               &quot;sse2&quot;,
+               &quot;ss&quot;,
+               &quot;ht&quot;,
+               &quot;tm&quot;,
+               &quot;pbe&quot;,
+               &quot;syscall&quot;,
+               &quot;nx&quot;,
+               &quot;rdtscp&quot;,
+               &quot;lm&quot;,
+               &quot;constant_tsc&quot;,
+               &quot;arch_perfmon&quot;,
+               &quot;pebs&quot;,
+               &quot;bts&quot;,
+               &quot;rep_good&quot;,
+               &quot;xtopology&quot;,
+               &quot;nonstop_tsc&quot;,
+               &quot;aperfmperf&quot;,
+               &quot;pni&quot;,
+               &quot;dtes64&quot;,
+               &quot;monitor&quot;,
+               &quot;ds_cpl&quot;,
+               &quot;vmx&quot;,
+               &quot;smx&quot;,
+               &quot;est&quot;,
+               &quot;tm2&quot;,
+               &quot;ssse3&quot;,
+               &quot;cx16&quot;,
+               &quot;xtpr&quot;,
+               &quot;pdcm&quot;,
+               &quot;sse4_1&quot;,
+               &quot;sse4_2&quot;,
+               &quot;popcnt&quot;,
+               &quot;lahf_lm&quot;,
+               &quot;ida&quot;,
+               &quot;dts&quot;,
+               &quot;tpr_shadow&quot;,
+               &quot;vnmi&quot;,
+               &quot;flexpriority&quot;,
+               &quot;ept&quot;,
+               &quot;vpid&quot;
+             ],
+             &quot;cores&quot;: &quot;4&quot;,
+             &quot;model&quot;: &quot;30&quot;,
+             &quot;core_id&quot;: &quot;2&quot;,
+             &quot;model_name&quot;: &quot;Intel(R) Core(TM) i7 CPU         870  @ 2.93GHz&quot;,
+             &quot;family&quot;: &quot;6&quot;,
+             &quot;physical_id&quot;: &quot;0&quot;,
+             &quot;mhz&quot;: &quot;1200.000&quot;,
+             &quot;vendor_id&quot;: &quot;GenuineIntel&quot;,
+             &quot;cache_size&quot;: &quot;8192 KB&quot;,
+             &quot;stepping&quot;: &quot;5&quot;
+           },
+           &quot;real&quot;: 1,
+           &quot;7&quot;: {
+             &quot;flags&quot;: [
+               &quot;fpu&quot;,
+               &quot;vme&quot;,
+               &quot;de&quot;,
+               &quot;pse&quot;,
+               &quot;tsc&quot;,
+               &quot;msr&quot;,
+               &quot;pae&quot;,
+               &quot;mce&quot;,
+               &quot;cx8&quot;,
+               &quot;apic&quot;,
+               &quot;sep&quot;,
+               &quot;mtrr&quot;,
+               &quot;pge&quot;,
+               &quot;mca&quot;,
+               &quot;cmov&quot;,
+               &quot;pat&quot;,
+               &quot;pse36&quot;,
+               &quot;clflush&quot;,
+               &quot;dts&quot;,
+               &quot;acpi&quot;,
+               &quot;mmx&quot;,
+               &quot;fxsr&quot;,
+               &quot;sse&quot;,
+               &quot;sse2&quot;,
+               &quot;ss&quot;,
+               &quot;ht&quot;,
+               &quot;tm&quot;,
+               &quot;pbe&quot;,
+               &quot;syscall&quot;,
+               &quot;nx&quot;,
+               &quot;rdtscp&quot;,
+               &quot;lm&quot;,
+               &quot;constant_tsc&quot;,
+               &quot;arch_perfmon&quot;,
+               &quot;pebs&quot;,
+               &quot;bts&quot;,
+               &quot;rep_good&quot;,
+               &quot;xtopology&quot;,
+               &quot;nonstop_tsc&quot;,
+               &quot;aperfmperf&quot;,
+               &quot;pni&quot;,
+               &quot;dtes64&quot;,
+               &quot;monitor&quot;,
+               &quot;ds_cpl&quot;,
+               &quot;vmx&quot;,
+               &quot;smx&quot;,
+               &quot;est&quot;,
+               &quot;tm2&quot;,
+               &quot;ssse3&quot;,
+               &quot;cx16&quot;,
+               &quot;xtpr&quot;,
+               &quot;pdcm&quot;,
+               &quot;sse4_1&quot;,
+               &quot;sse4_2&quot;,
+               &quot;popcnt&quot;,
+               &quot;lahf_lm&quot;,
+               &quot;ida&quot;,
+               &quot;dts&quot;,
+               &quot;tpr_shadow&quot;,
+               &quot;vnmi&quot;,
+               &quot;flexpriority&quot;,
+               &quot;ept&quot;,
+               &quot;vpid&quot;
+             ],
+             &quot;cores&quot;: &quot;4&quot;,
+             &quot;model&quot;: &quot;30&quot;,
+             &quot;core_id&quot;: &quot;3&quot;,
+             &quot;model_name&quot;: &quot;Intel(R) Core(TM) i7 CPU         870  @ 2.93GHz&quot;,
+             &quot;family&quot;: &quot;6&quot;,
+             &quot;physical_id&quot;: &quot;0&quot;,
+             &quot;mhz&quot;: &quot;1200.000&quot;,
+             &quot;vendor_id&quot;: &quot;GenuineIntel&quot;,
+             &quot;cache_size&quot;: &quot;8192 KB&quot;,
+             &quot;stepping&quot;: &quot;5&quot;
+           },
+           &quot;total&quot;: 8,
+           &quot;0&quot;: {
+             &quot;flags&quot;: [
+               &quot;fpu&quot;,
+               &quot;vme&quot;,
+               &quot;de&quot;,
+               &quot;pse&quot;,
+               &quot;tsc&quot;,
+               &quot;msr&quot;,
+               &quot;pae&quot;,
+               &quot;mce&quot;,
+               &quot;cx8&quot;,
+               &quot;apic&quot;,
+               &quot;sep&quot;,
+               &quot;mtrr&quot;,
+               &quot;pge&quot;,
+               &quot;mca&quot;,
+               &quot;cmov&quot;,
+               &quot;pat&quot;,
+               &quot;pse36&quot;,
+               &quot;clflush&quot;,
+               &quot;dts&quot;,
+               &quot;acpi&quot;,
+               &quot;mmx&quot;,
+               &quot;fxsr&quot;,
+               &quot;sse&quot;,
+               &quot;sse2&quot;,
+               &quot;ss&quot;,
+               &quot;ht&quot;,
+               &quot;tm&quot;,
+               &quot;pbe&quot;,
+               &quot;syscall&quot;,
+               &quot;nx&quot;,
+               &quot;rdtscp&quot;,
+               &quot;lm&quot;,
+               &quot;constant_tsc&quot;,
+               &quot;arch_perfmon&quot;,
+               &quot;pebs&quot;,
+               &quot;bts&quot;,
+               &quot;rep_good&quot;,
+               &quot;xtopology&quot;,
+               &quot;nonstop_tsc&quot;,
+               &quot;aperfmperf&quot;,
+               &quot;pni&quot;,
+               &quot;dtes64&quot;,
+               &quot;monitor&quot;,
+               &quot;ds_cpl&quot;,
+               &quot;vmx&quot;,
+               &quot;smx&quot;,
+               &quot;est&quot;,
+               &quot;tm2&quot;,
+               &quot;ssse3&quot;,
+               &quot;cx16&quot;,
+               &quot;xtpr&quot;,
+               &quot;pdcm&quot;,
+               &quot;sse4_1&quot;,
+               &quot;sse4_2&quot;,
+               &quot;popcnt&quot;,
+               &quot;lahf_lm&quot;,
+               &quot;ida&quot;,
+               &quot;dts&quot;,
+               &quot;tpr_shadow&quot;,
+               &quot;vnmi&quot;,
+               &quot;flexpriority&quot;,
+               &quot;ept&quot;,
+               &quot;vpid&quot;
+             ],
+             &quot;cores&quot;: &quot;4&quot;,
+             &quot;model&quot;: &quot;30&quot;,
+             &quot;core_id&quot;: &quot;0&quot;,
+             &quot;model_name&quot;: &quot;Intel(R) Core(TM) i7 CPU         870  @ 2.93GHz&quot;,
+             &quot;family&quot;: &quot;6&quot;,
+             &quot;physical_id&quot;: &quot;0&quot;,
+             &quot;mhz&quot;: &quot;2934.000&quot;,
+             &quot;vendor_id&quot;: &quot;GenuineIntel&quot;,
+             &quot;cache_size&quot;: &quot;8192 KB&quot;,
+             &quot;stepping&quot;: &quot;5&quot;
+           },
+           &quot;1&quot;: {
+             &quot;flags&quot;: [
+               &quot;fpu&quot;,
+               &quot;vme&quot;,
+               &quot;de&quot;,
+               &quot;pse&quot;,
+               &quot;tsc&quot;,
+               &quot;msr&quot;,
+               &quot;pae&quot;,
+               &quot;mce&quot;,
+               &quot;cx8&quot;,
+               &quot;apic&quot;,
+               &quot;sep&quot;,
+               &quot;mtrr&quot;,
+               &quot;pge&quot;,
+               &quot;mca&quot;,
+               &quot;cmov&quot;,
+               &quot;pat&quot;,
+               &quot;pse36&quot;,
+               &quot;clflush&quot;,
+               &quot;dts&quot;,
+               &quot;acpi&quot;,
+               &quot;mmx&quot;,
+               &quot;fxsr&quot;,
+               &quot;sse&quot;,
+               &quot;sse2&quot;,
+               &quot;ss&quot;,
+               &quot;ht&quot;,
+               &quot;tm&quot;,
+               &quot;pbe&quot;,
+               &quot;syscall&quot;,
+               &quot;nx&quot;,
+               &quot;rdtscp&quot;,
+               &quot;lm&quot;,
+               &quot;constant_tsc&quot;,
+               &quot;arch_perfmon&quot;,
+               &quot;pebs&quot;,
+               &quot;bts&quot;,
+               &quot;rep_good&quot;,
+               &quot;xtopology&quot;,
+               &quot;nonstop_tsc&quot;,
+               &quot;aperfmperf&quot;,
+               &quot;pni&quot;,
+               &quot;dtes64&quot;,
+               &quot;monitor&quot;,
+               &quot;ds_cpl&quot;,
+               &quot;vmx&quot;,
+               &quot;smx&quot;,
+               &quot;est&quot;,
+               &quot;tm2&quot;,
+               &quot;ssse3&quot;,
+               &quot;cx16&quot;,
+               &quot;xtpr&quot;,
+               &quot;pdcm&quot;,
+               &quot;sse4_1&quot;,
+               &quot;sse4_2&quot;,
+               &quot;popcnt&quot;,
+               &quot;lahf_lm&quot;,
+               &quot;ida&quot;,
+               &quot;dts&quot;,
+               &quot;tpr_shadow&quot;,
+               &quot;vnmi&quot;,
+               &quot;flexpriority&quot;,
+               &quot;ept&quot;,
+               &quot;vpid&quot;
+             ],
+             &quot;cores&quot;: &quot;4&quot;,
+             &quot;model&quot;: &quot;30&quot;,
+             &quot;core_id&quot;: &quot;1&quot;,
+             &quot;model_name&quot;: &quot;Intel(R) Core(TM) i7 CPU         870  @ 2.93GHz&quot;,
+             &quot;family&quot;: &quot;6&quot;,
+             &quot;physical_id&quot;: &quot;0&quot;,
+             &quot;mhz&quot;: &quot;1200.000&quot;,
+             &quot;vendor_id&quot;: &quot;GenuineIntel&quot;,
+             &quot;cache_size&quot;: &quot;8192 KB&quot;,
+             &quot;stepping&quot;: &quot;5&quot;
+           },
+           &quot;2&quot;: {
+             &quot;flags&quot;: [
+               &quot;fpu&quot;,
+               &quot;vme&quot;,
+               &quot;de&quot;,
+               &quot;pse&quot;,
+               &quot;tsc&quot;,
+               &quot;msr&quot;,
+               &quot;pae&quot;,
+               &quot;mce&quot;,
+               &quot;cx8&quot;,
+               &quot;apic&quot;,
+               &quot;sep&quot;,
+               &quot;mtrr&quot;,
+               &quot;pge&quot;,
+               &quot;mca&quot;,
+               &quot;cmov&quot;,
+               &quot;pat&quot;,
+               &quot;pse36&quot;,
+               &quot;clflush&quot;,
+               &quot;dts&quot;,
+               &quot;acpi&quot;,
+               &quot;mmx&quot;,
+               &quot;fxsr&quot;,
+               &quot;sse&quot;,
+               &quot;sse2&quot;,
+               &quot;ss&quot;,
+               &quot;ht&quot;,
+               &quot;tm&quot;,
+               &quot;pbe&quot;,
+               &quot;syscall&quot;,
+               &quot;nx&quot;,
+               &quot;rdtscp&quot;,
+               &quot;lm&quot;,
+               &quot;constant_tsc&quot;,
+               &quot;arch_perfmon&quot;,
+               &quot;pebs&quot;,
+               &quot;bts&quot;,
+               &quot;rep_good&quot;,
+               &quot;xtopology&quot;,
+               &quot;nonstop_tsc&quot;,
+               &quot;aperfmperf&quot;,
+               &quot;pni&quot;,
+               &quot;dtes64&quot;,
+               &quot;monitor&quot;,
+               &quot;ds_cpl&quot;,
+               &quot;vmx&quot;,
+               &quot;smx&quot;,
+               &quot;est&quot;,
+               &quot;tm2&quot;,
+               &quot;ssse3&quot;,
+               &quot;cx16&quot;,
+               &quot;xtpr&quot;,
+               &quot;pdcm&quot;,
+               &quot;sse4_1&quot;,
+               &quot;sse4_2&quot;,
+               &quot;popcnt&quot;,
+               &quot;lahf_lm&quot;,
+               &quot;ida&quot;,
+               &quot;dts&quot;,
+               &quot;tpr_shadow&quot;,
+               &quot;vnmi&quot;,
+               &quot;flexpriority&quot;,
+               &quot;ept&quot;,
+               &quot;vpid&quot;
+             ],
+             &quot;cores&quot;: &quot;4&quot;,
+             &quot;model&quot;: &quot;30&quot;,
+             &quot;core_id&quot;: &quot;2&quot;,
+             &quot;model_name&quot;: &quot;Intel(R) Core(TM) i7 CPU         870  @ 2.93GHz&quot;,
+             &quot;family&quot;: &quot;6&quot;,
+             &quot;physical_id&quot;: &quot;0&quot;,
+             &quot;mhz&quot;: &quot;1200.000&quot;,
+             &quot;vendor_id&quot;: &quot;GenuineIntel&quot;,
+             &quot;cache_size&quot;: &quot;8192 KB&quot;,
+             &quot;stepping&quot;: &quot;5&quot;
+           },
+           &quot;3&quot;: {
+             &quot;flags&quot;: [
+               &quot;fpu&quot;,
+               &quot;vme&quot;,
+               &quot;de&quot;,
+               &quot;pse&quot;,
+               &quot;tsc&quot;,
+               &quot;msr&quot;,
+               &quot;pae&quot;,
+               &quot;mce&quot;,
+               &quot;cx8&quot;,
+               &quot;apic&quot;,
+               &quot;sep&quot;,
+               &quot;mtrr&quot;,
+               &quot;pge&quot;,
+               &quot;mca&quot;,
+               &quot;cmov&quot;,
+               &quot;pat&quot;,
+               &quot;pse36&quot;,
+               &quot;clflush&quot;,
+               &quot;dts&quot;,
+               &quot;acpi&quot;,
+               &quot;mmx&quot;,
+               &quot;fxsr&quot;,
+               &quot;sse&quot;,
+               &quot;sse2&quot;,
+               &quot;ss&quot;,
+               &quot;ht&quot;,
+               &quot;tm&quot;,
+               &quot;pbe&quot;,
+               &quot;syscall&quot;,
+               &quot;nx&quot;,
+               &quot;rdtscp&quot;,
+               &quot;lm&quot;,
+               &quot;constant_tsc&quot;,
+               &quot;arch_perfmon&quot;,
+               &quot;pebs&quot;,
+               &quot;bts&quot;,
+               &quot;rep_good&quot;,
+               &quot;xtopology&quot;,
+               &quot;nonstop_tsc&quot;,
+               &quot;aperfmperf&quot;,
+               &quot;pni&quot;,
+               &quot;dtes64&quot;,
+               &quot;monitor&quot;,
+               &quot;ds_cpl&quot;,
+               &quot;vmx&quot;,
+               &quot;smx&quot;,
+               &quot;est&quot;,
+               &quot;tm2&quot;,
+               &quot;ssse3&quot;,
+               &quot;cx16&quot;,
+               &quot;xtpr&quot;,
+               &quot;pdcm&quot;,
+               &quot;sse4_1&quot;,
+               &quot;sse4_2&quot;,
+               &quot;popcnt&quot;,
+               &quot;lahf_lm&quot;,
+               &quot;ida&quot;,
+               &quot;dts&quot;,
+               &quot;tpr_shadow&quot;,
+               &quot;vnmi&quot;,
+               &quot;flexpriority&quot;,
+               &quot;ept&quot;,
+               &quot;vpid&quot;
+             ],
+             &quot;cores&quot;: &quot;4&quot;,
+             &quot;model&quot;: &quot;30&quot;,
+             &quot;core_id&quot;: &quot;3&quot;,
+             &quot;model_name&quot;: &quot;Intel(R) Core(TM) i7 CPU         870  @ 2.93GHz&quot;,
+             &quot;family&quot;: &quot;6&quot;,
+             &quot;physical_id&quot;: &quot;0&quot;,
+             &quot;mhz&quot;: &quot;1200.000&quot;,
+             &quot;vendor_id&quot;: &quot;GenuineIntel&quot;,
+             &quot;cache_size&quot;: &quot;8192 KB&quot;,
+             &quot;stepping&quot;: &quot;5&quot;
+           },
+           &quot;4&quot;: {
+             &quot;flags&quot;: [
+               &quot;fpu&quot;,
+               &quot;vme&quot;,
+               &quot;de&quot;,
+               &quot;pse&quot;,
+               &quot;tsc&quot;,
+               &quot;msr&quot;,
+               &quot;pae&quot;,
+               &quot;mce&quot;,
+               &quot;cx8&quot;,
+               &quot;apic&quot;,
+               &quot;sep&quot;,
+               &quot;mtrr&quot;,
+               &quot;pge&quot;,
+               &quot;mca&quot;,
+               &quot;cmov&quot;,
+               &quot;pat&quot;,
+               &quot;pse36&quot;,
+               &quot;clflush&quot;,
+               &quot;dts&quot;,
+               &quot;acpi&quot;,
+               &quot;mmx&quot;,
+               &quot;fxsr&quot;,
+               &quot;sse&quot;,
+               &quot;sse2&quot;,
+               &quot;ss&quot;,
+               &quot;ht&quot;,
+               &quot;tm&quot;,
+               &quot;pbe&quot;,
+               &quot;syscall&quot;,
+               &quot;nx&quot;,
+               &quot;rdtscp&quot;,
+               &quot;lm&quot;,
+               &quot;constant_tsc&quot;,
+               &quot;arch_perfmon&quot;,
+               &quot;pebs&quot;,
+               &quot;bts&quot;,
+               &quot;rep_good&quot;,
+               &quot;xtopology&quot;,
+               &quot;nonstop_tsc&quot;,
+               &quot;aperfmperf&quot;,
+               &quot;pni&quot;,
+               &quot;dtes64&quot;,
+               &quot;monitor&quot;,
+               &quot;ds_cpl&quot;,
+               &quot;vmx&quot;,
+               &quot;smx&quot;,
+               &quot;est&quot;,
+               &quot;tm2&quot;,
+               &quot;ssse3&quot;,
+               &quot;cx16&quot;,
+               &quot;xtpr&quot;,
+               &quot;pdcm&quot;,
+               &quot;sse4_1&quot;,
+               &quot;sse4_2&quot;,
+               &quot;popcnt&quot;,
+               &quot;lahf_lm&quot;,
+               &quot;ida&quot;,
+               &quot;dts&quot;,
+               &quot;tpr_shadow&quot;,
+               &quot;vnmi&quot;,
+               &quot;flexpriority&quot;,
+               &quot;ept&quot;,
+               &quot;vpid&quot;
+             ],
+             &quot;cores&quot;: &quot;4&quot;,
+             &quot;model&quot;: &quot;30&quot;,
+             &quot;core_id&quot;: &quot;0&quot;,
+             &quot;model_name&quot;: &quot;Intel(R) Core(TM) i7 CPU         870  @ 2.93GHz&quot;,
+             &quot;family&quot;: &quot;6&quot;,
+             &quot;physical_id&quot;: &quot;0&quot;,
+             &quot;mhz&quot;: &quot;1200.000&quot;,
+             &quot;vendor_id&quot;: &quot;GenuineIntel&quot;,
+             &quot;cache_size&quot;: &quot;8192 KB&quot;,
+             &quot;stepping&quot;: &quot;5&quot;
+           },
+           &quot;5&quot;: {
+             &quot;flags&quot;: [
+               &quot;fpu&quot;,
+               &quot;vme&quot;,
+               &quot;de&quot;,
+               &quot;pse&quot;,
+               &quot;tsc&quot;,
+               &quot;msr&quot;,
+               &quot;pae&quot;,
+               &quot;mce&quot;,
+               &quot;cx8&quot;,
+               &quot;apic&quot;,
+               &quot;sep&quot;,
+               &quot;mtrr&quot;,
+               &quot;pge&quot;,
+               &quot;mca&quot;,
+               &quot;cmov&quot;,
+               &quot;pat&quot;,
+               &quot;pse36&quot;,
+               &quot;clflush&quot;,
+               &quot;dts&quot;,
+               &quot;acpi&quot;,
+               &quot;mmx&quot;,
+               &quot;fxsr&quot;,
+               &quot;sse&quot;,
+               &quot;sse2&quot;,
+               &quot;ss&quot;,
+               &quot;ht&quot;,
+               &quot;tm&quot;,
+               &quot;pbe&quot;,
+               &quot;syscall&quot;,
+               &quot;nx&quot;,
+               &quot;rdtscp&quot;,
+               &quot;lm&quot;,
+               &quot;constant_tsc&quot;,
+               &quot;arch_perfmon&quot;,
+               &quot;pebs&quot;,
+               &quot;bts&quot;,
+               &quot;rep_good&quot;,
+               &quot;xtopology&quot;,
+               &quot;nonstop_tsc&quot;,
+               &quot;aperfmperf&quot;,
+               &quot;pni&quot;,
+               &quot;dtes64&quot;,
+               &quot;monitor&quot;,
+               &quot;ds_cpl&quot;,
+               &quot;vmx&quot;,
+               &quot;smx&quot;,
+               &quot;est&quot;,
+               &quot;tm2&quot;,
+               &quot;ssse3&quot;,
+               &quot;cx16&quot;,
+               &quot;xtpr&quot;,
+               &quot;pdcm&quot;,
+               &quot;sse4_1&quot;,
+               &quot;sse4_2&quot;,
+               &quot;popcnt&quot;,
+               &quot;lahf_lm&quot;,
+               &quot;ida&quot;,
+               &quot;dts&quot;,
+               &quot;tpr_shadow&quot;,
+               &quot;vnmi&quot;,
+               &quot;flexpriority&quot;,
+               &quot;ept&quot;,
+               &quot;vpid&quot;
+             ],
+             &quot;cores&quot;: &quot;4&quot;,
+             &quot;model&quot;: &quot;30&quot;,
+             &quot;core_id&quot;: &quot;1&quot;,
+             &quot;model_name&quot;: &quot;Intel(R) Core(TM) i7 CPU         870  @ 2.93GHz&quot;,
+             &quot;family&quot;: &quot;6&quot;,
+             &quot;physical_id&quot;: &quot;0&quot;,
+             &quot;mhz&quot;: &quot;1200.000&quot;,
+             &quot;vendor_id&quot;: &quot;GenuineIntel&quot;,
+             &quot;cache_size&quot;: &quot;8192 KB&quot;,
+             &quot;stepping&quot;: &quot;5&quot;
+           }
+         },
+         &quot;uptime&quot;: &quot;12 days 02 hours 55 minutes 22 seconds&quot;,
+         &quot;hostname&quot;: &quot;lemur&quot;,
+         &quot;roles&quot;: [
+           &quot;sun-java&quot;
+         ],
+         &quot;etc&quot;: {
+           &quot;group&quot;: {
+             &quot;sasl&quot;: {
+               &quot;gid&quot;: 45,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;jenkins&quot;: {
+               &quot;gid&quot;: 1001,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;kmem&quot;: {
+               &quot;gid&quot;: 15,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;ssl-cert&quot;: {
+               &quot;gid&quot;: 112,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;lp&quot;: {
+               &quot;gid&quot;: 7,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;dip&quot;: {
+               &quot;gid&quot;: 30,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;www-data&quot;: {
+               &quot;gid&quot;: 33,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;memcache&quot;: {
+               &quot;gid&quot;: 126,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;couchdb&quot;: {
+               &quot;gid&quot;: 113,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;news&quot;: {
+               &quot;gid&quot;: 9,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;ssh&quot;: {
+               &quot;gid&quot;: 107,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;avahi-autoipd&quot;: {
+               &quot;gid&quot;: 108,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;sudo&quot;: {
+               &quot;gid&quot;: 27,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;mysql&quot;: {
+               &quot;gid&quot;: 123,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;chef&quot;: {
+               &quot;gid&quot;: 131,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;cdrom&quot;: {
+               &quot;gid&quot;: 24,
+               &quot;members&quot;: [
+                 &quot;andrew&quot;
+               ]
+             },
+             &quot;list&quot;: {
+               &quot;gid&quot;: 38,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;uucp&quot;: {
+               &quot;gid&quot;: 10,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;voice&quot;: {
+               &quot;gid&quot;: 22,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;netdev&quot;: {
+               &quot;gid&quot;: 110,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;shadow&quot;: {
+               &quot;gid&quot;: 42,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;root&quot;: {
+               &quot;gid&quot;: 0,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;utempter&quot;: {
+               &quot;gid&quot;: 116,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;smmta&quot;: {
+               &quot;gid&quot;: 124,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;games&quot;: {
+               &quot;gid&quot;: 60,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;adm&quot;: {
+               &quot;gid&quot;: 4,
+               &quot;members&quot;: [
+                 &quot;andrew&quot;
+               ]
+             },
+             &quot;crontab&quot;: {
+               &quot;gid&quot;: 102,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;andrew&quot;: {
+               &quot;gid&quot;: 1000,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;src&quot;: {
+               &quot;gid&quot;: 40,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;staff&quot;: {
+               &quot;gid&quot;: 50,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;nopasswdlogin&quot;: {
+               &quot;gid&quot;: 121,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;pulse-access&quot;: {
+               &quot;gid&quot;: 115,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;saned&quot;: {
+               &quot;gid&quot;: 118,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;hdfs&quot;: {
+               &quot;gid&quot;: 133,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;gnats&quot;: {
+               &quot;gid&quot;: 41,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;operator&quot;: {
+               &quot;gid&quot;: 37,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;fuse&quot;: {
+               &quot;gid&quot;: 104,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;avahi&quot;: {
+               &quot;gid&quot;: 109,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;lpadmin&quot;: {
+               &quot;gid&quot;: 111,
+               &quot;members&quot;: [
+                 &quot;andrew&quot;
+               ]
+             },
+             &quot;redis&quot;: {
+               &quot;gid&quot;: 128,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;daemon&quot;: {
+               &quot;gid&quot;: 1,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;proxy&quot;: {
+               &quot;gid&quot;: 13,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;mapred&quot;: {
+               &quot;gid&quot;: 134,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;jetty&quot;: {
+               &quot;gid&quot;: 129,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;disk&quot;: {
+               &quot;gid&quot;: 6,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;tty&quot;: {
+               &quot;gid&quot;: 5,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;sys&quot;: {
+               &quot;gid&quot;: 3,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;sambashare&quot;: {
+               &quot;gid&quot;: 122,
+               &quot;members&quot;: [
+                 &quot;andrew&quot;
+               ]
+             },
+             &quot;smmsp&quot;: {
+               &quot;gid&quot;: 125,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;man&quot;: {
+               &quot;gid&quot;: 12,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;plugdev&quot;: {
+               &quot;gid&quot;: 46,
+               &quot;members&quot;: [
+                 &quot;andrew&quot;
+               ]
+             },
+             &quot;gdm&quot;: {
+               &quot;gid&quot;: 120,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;tape&quot;: {
+               &quot;gid&quot;: 26,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;pulse&quot;: {
+               &quot;gid&quot;: 114,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;rabbitmq&quot;: {
+               &quot;gid&quot;: 130,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;rtkit&quot;: {
+               &quot;gid&quot;: 117,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;ntp&quot;: {
+               &quot;gid&quot;: 127,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;floppy&quot;: {
+               &quot;gid&quot;: 25,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;users&quot;: {
+               &quot;gid&quot;: 100,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;fax&quot;: {
+               &quot;gid&quot;: 21,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;syslog&quot;: {
+               &quot;gid&quot;: 103,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;irc&quot;: {
+               &quot;gid&quot;: 39,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;messagebus&quot;: {
+               &quot;gid&quot;: 105,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;video&quot;: {
+               &quot;gid&quot;: 44,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;mlocate&quot;: {
+               &quot;gid&quot;: 106,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;bin&quot;: {
+               &quot;gid&quot;: 2,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;admin&quot;: {
+               &quot;gid&quot;: 119,
+               &quot;members&quot;: [
+                 &quot;andrew&quot;
+               ]
+             },
+             &quot;libuuid&quot;: {
+               &quot;gid&quot;: 101,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;nogroup&quot;: {
+               &quot;gid&quot;: 65534,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;hadoop&quot;: {
+               &quot;gid&quot;: 132,
+               &quot;members&quot;: [
+                 &quot;hdfs&quot;,
+                 &quot;mapred&quot;
+               ]
+             },
+             &quot;utmp&quot;: {
+               &quot;gid&quot;: 43,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;dialout&quot;: {
+               &quot;gid&quot;: 20,
+               &quot;members&quot;: [
+                 &quot;andrew&quot;
+               ]
+             },
+             &quot;mail&quot;: {
+               &quot;gid&quot;: 8,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;backup&quot;: {
+               &quot;gid&quot;: 34,
+               &quot;members&quot;: [
+     
+               ]
+             },
+             &quot;audio&quot;: {
+               &quot;gid&quot;: 29,
+               &quot;members&quot;: [
+                 &quot;pulse&quot;
+               ]
+             }
+           },
+           &quot;passwd&quot;: {
+             &quot;hplip&quot;: {
+               &quot;gecos&quot;: &quot;HPLIP system user,,,&quot;,
+               &quot;gid&quot;: 7,
+               &quot;dir&quot;: &quot;/var/run/hplip&quot;,
+               &quot;uid&quot;: 112,
+               &quot;shell&quot;: &quot;/bin/false&quot;
+             },
+             &quot;saned&quot;: {
+               &quot;gecos&quot;: &quot;&quot;,
+               &quot;gid&quot;: 118,
+               &quot;dir&quot;: &quot;/home/saned&quot;,
+               &quot;uid&quot;: 111,
+               &quot;shell&quot;: &quot;/bin/false&quot;
+             },
+             &quot;rtkit&quot;: {
+               &quot;gecos&quot;: &quot;RealtimeKit,,,&quot;,
+               &quot;gid&quot;: 117,
+               &quot;dir&quot;: &quot;/proc&quot;,
+               &quot;uid&quot;: 110,
+               &quot;shell&quot;: &quot;/bin/false&quot;
+             },
+             &quot;uucp&quot;: {
+               &quot;gecos&quot;: &quot;uucp&quot;,
+               &quot;gid&quot;: 10,
+               &quot;dir&quot;: &quot;/var/spool/uucp&quot;,
+               &quot;uid&quot;: 10,
+               &quot;shell&quot;: &quot;/bin/sh&quot;
+             },
+             &quot;mapred&quot;: {
+               &quot;gecos&quot;: &quot;Hadoop MapReduce,,,&quot;,
+               &quot;gid&quot;: 134,
+               &quot;dir&quot;: &quot;/usr/lib/hadoop-0.20&quot;,
+               &quot;uid&quot;: 125,
+               &quot;shell&quot;: &quot;/bin/bash&quot;
+             },
+             &quot;syslog&quot;: {
+               &quot;gecos&quot;: &quot;&quot;,
+               &quot;gid&quot;: 103,
+               &quot;dir&quot;: &quot;/home/syslog&quot;,
+               &quot;uid&quot;: 101,
+               &quot;shell&quot;: &quot;/bin/false&quot;
+             },
+             &quot;list&quot;: {
+               &quot;gecos&quot;: &quot;Mailing List Manager&quot;,
+               &quot;gid&quot;: 38,
+               &quot;dir&quot;: &quot;/var/list&quot;,
+               &quot;uid&quot;: 38,
+               &quot;shell&quot;: &quot;/bin/sh&quot;
+             },
+             &quot;games&quot;: {
+               &quot;gecos&quot;: &quot;games&quot;,
+               &quot;gid&quot;: 60,
+               &quot;dir&quot;: &quot;/usr/games&quot;,
+               &quot;uid&quot;: 5,
+               &quot;shell&quot;: &quot;/bin/sh&quot;
+             },
+             &quot;jenkins&quot;: {
+               &quot;gecos&quot;: &quot;&quot;,
+               &quot;gid&quot;: 1001,
+               &quot;dir&quot;: &quot;/var/lib/jenkins&quot;,
+               &quot;uid&quot;: 1001,
+               &quot;shell&quot;: &quot;/bin/sh&quot;
+             },
+             &quot;smmta&quot;: {
+               &quot;gecos&quot;: &quot;Mail Transfer Agent,,,&quot;,
+               &quot;gid&quot;: 124,
+               &quot;dir&quot;: &quot;/var/lib/sendmail&quot;,
+               &quot;uid&quot;: 116,
+               &quot;shell&quot;: &quot;/bin/false&quot;
+             },
+             &quot;mysql&quot;: {
+               &quot;gecos&quot;: &quot;MySQL Server,,,&quot;,
+               &quot;gid&quot;: 123,
+               &quot;dir&quot;: &quot;/nonexistent&quot;,
+               &quot;uid&quot;: 115,
+               &quot;shell&quot;: &quot;/bin/false&quot;
+             },
+             &quot;sys&quot;: {
+               &quot;gecos&quot;: &quot;sys&quot;,
+               &quot;gid&quot;: 3,
+               &quot;dir&quot;: &quot;/dev&quot;,
+               &quot;uid&quot;: 3,
+               &quot;shell&quot;: &quot;/bin/sh&quot;
+             },
+             &quot;pulse&quot;: {
+               &quot;gecos&quot;: &quot;PulseAudio daemon,,,&quot;,
+               &quot;gid&quot;: 114,
+               &quot;dir&quot;: &quot;/var/run/pulse&quot;,
+               &quot;uid&quot;: 109,
+               &quot;shell&quot;: &quot;/bin/false&quot;
+             },
+             &quot;kernoops&quot;: {
+               &quot;gecos&quot;: &quot;Kernel Oops Tracking Daemon,,,&quot;,
+               &quot;gid&quot;: 65534,
+               &quot;dir&quot;: &quot;/&quot;,
+               &quot;uid&quot;: 108,
+               &quot;shell&quot;: &quot;/bin/false&quot;
+             },
+             &quot;usbmux&quot;: {
+               &quot;gecos&quot;: &quot;usbmux daemon,,,&quot;,
+               &quot;gid&quot;: 46,
+               &quot;dir&quot;: &quot;/home/usbmux&quot;,
+               &quot;uid&quot;: 106,
+               &quot;shell&quot;: &quot;/bin/false&quot;
+             },
+             &quot;couchdb&quot;: {
+               &quot;gecos&quot;: &quot;CouchDB Administrator,,,&quot;,
+               &quot;gid&quot;: 113,
+               &quot;dir&quot;: &quot;/var/lib/couchdb&quot;,
+               &quot;uid&quot;: 105,
+               &quot;shell&quot;: &quot;/bin/bash&quot;
+             },
+             &quot;avahi-autoipd&quot;: {
+               &quot;gecos&quot;: &quot;Avahi autoip daemon,,,&quot;,
+               &quot;gid&quot;: 108,
+               &quot;dir&quot;: &quot;/var/lib/avahi-autoipd&quot;,
+               &quot;uid&quot;: 103,
+               &quot;shell&quot;: &quot;/bin/false&quot;
+             },
+             &quot;nobody&quot;: {
+               &quot;gecos&quot;: &quot;nobody&quot;,
+               &quot;gid&quot;: 65534,
+               &quot;dir&quot;: &quot;/nonexistent&quot;,
+               &quot;uid&quot;: 65534,
+               &quot;shell&quot;: &quot;/bin/sh&quot;
+             },
+             &quot;memcache&quot;: {
+               &quot;gecos&quot;: &quot;Memcached,,,&quot;,
+               &quot;gid&quot;: 126,
+               &quot;dir&quot;: &quot;/nonexistent&quot;,
+               &quot;uid&quot;: 118,
+               &quot;shell&quot;: &quot;/bin/false&quot;
+             },
+             &quot;avahi&quot;: {
+               &quot;gecos&quot;: &quot;Avahi mDNS daemon,,,&quot;,
+               &quot;gid&quot;: 109,
+               &quot;dir&quot;: &quot;/var/run/avahi-daemon&quot;,
+               &quot;uid&quot;: 104,
+               &quot;shell&quot;: &quot;/bin/false&quot;
+             },
+             &quot;libuuid&quot;: {
+               &quot;gecos&quot;: &quot;&quot;,
+               &quot;gid&quot;: 101,
+               &quot;dir&quot;: &quot;/var/lib/libuuid&quot;,
+               &quot;uid&quot;: 100,
+               &quot;shell&quot;: &quot;/bin/sh&quot;
+             },
+             &quot;irc&quot;: {
+               &quot;gecos&quot;: &quot;ircd&quot;,
+               &quot;gid&quot;: 39,
+               &quot;dir&quot;: &quot;/var/run/ircd&quot;,
+               &quot;uid&quot;: 39,
+               &quot;shell&quot;: &quot;/bin/sh&quot;
+             },
+             &quot;backup&quot;: {
+               &quot;gecos&quot;: &quot;backup&quot;,
+               &quot;gid&quot;: 34,
+               &quot;dir&quot;: &quot;/var/backups&quot;,
+               &quot;uid&quot;: 34,
+               &quot;shell&quot;: &quot;/bin/sh&quot;
+             },
+             &quot;www-data&quot;: {
+               &quot;gecos&quot;: &quot;www-data&quot;,
+               &quot;gid&quot;: 33,
+               &quot;dir&quot;: &quot;/var/www&quot;,
+               &quot;uid&quot;: 33,
+               &quot;shell&quot;: &quot;/bin/sh&quot;
+             },
+             &quot;lp&quot;: {
+               &quot;gecos&quot;: &quot;lp&quot;,
+               &quot;gid&quot;: 7,
+               &quot;dir&quot;: &quot;/var/spool/lpd&quot;,
+               &quot;uid&quot;: 7,
+               &quot;shell&quot;: &quot;/bin/sh&quot;
+             },
+             &quot;man&quot;: {
+               &quot;gecos&quot;: &quot;man&quot;,
+               &quot;gid&quot;: 12,
+               &quot;dir&quot;: &quot;/var/cache/man&quot;,
+               &quot;uid&quot;: 6,
+               &quot;shell&quot;: &quot;/bin/sh&quot;
+             },
+             &quot;gdm&quot;: {
+               &quot;gecos&quot;: &quot;Gnome Display Manager&quot;,
+               &quot;gid&quot;: 120,
+               &quot;dir&quot;: &quot;/var/lib/gdm&quot;,
+               &quot;uid&quot;: 113,
+               &quot;shell&quot;: &quot;/bin/false&quot;
+             },
+             &quot;messagebus&quot;: {
+               &quot;gecos&quot;: &quot;&quot;,
+               &quot;gid&quot;: 105,
+               &quot;dir&quot;: &quot;/var/run/dbus&quot;,
+               &quot;uid&quot;: 102,
+               &quot;shell&quot;: &quot;/bin/false&quot;
+             },
+             &quot;proxy&quot;: {
+               &quot;gecos&quot;: &quot;proxy&quot;,
+               &quot;gid&quot;: 13,
+               &quot;dir&quot;: &quot;/bin&quot;,
+               &quot;uid&quot;: 13,
+               &quot;shell&quot;: &quot;/bin/sh&quot;
+             },
+             &quot;mail&quot;: {
+               &quot;gecos&quot;: &quot;mail&quot;,
+               &quot;gid&quot;: 8,
+               &quot;dir&quot;: &quot;/var/mail&quot;,
+               &quot;uid&quot;: 8,
+               &quot;shell&quot;: &quot;/bin/sh&quot;
+             },
+             &quot;sync&quot;: {
+               &quot;gecos&quot;: &quot;sync&quot;,
+               &quot;gid&quot;: 65534,
+               &quot;dir&quot;: &quot;/bin&quot;,
+               &quot;uid&quot;: 4,
+               &quot;shell&quot;: &quot;/bin/sync&quot;
+             },
+             &quot;chef&quot;: {
+               &quot;gecos&quot;: &quot;Chef Daemon,,,&quot;,
+               &quot;gid&quot;: 131,
+               &quot;dir&quot;: &quot;/var/lib/chef&quot;,
+               &quot;uid&quot;: 123,
+               &quot;shell&quot;: &quot;/bin/false&quot;
+             },
+             &quot;sshd&quot;: {
+               &quot;gecos&quot;: &quot;&quot;,
+               &quot;gid&quot;: 65534,
+               &quot;dir&quot;: &quot;/var/run/sshd&quot;,
+               &quot;uid&quot;: 114,
+               &quot;shell&quot;: &quot;/usr/sbin/nologin&quot;
+             },
+             &quot;andrew&quot;: {
+               &quot;gecos&quot;: &quot;andrew grangaard,,,&quot;,
+               &quot;gid&quot;: 1000,
+               &quot;dir&quot;: &quot;/home/andrew&quot;,
+               &quot;uid&quot;: 1000,
+               &quot;shell&quot;: &quot;/usr/bin/zsh&quot;
+             },
+             &quot;root&quot;: {
+               &quot;gecos&quot;: &quot;root&quot;,
+               &quot;gid&quot;: 0,
+               &quot;dir&quot;: &quot;/root&quot;,
+               &quot;uid&quot;: 0,
+               &quot;shell&quot;: &quot;/bin/bash&quot;
+             },
+             &quot;smmsp&quot;: {
+               &quot;gecos&quot;: &quot;Mail Submission Program,,,&quot;,
+               &quot;gid&quot;: 125,
+               &quot;dir&quot;: &quot;/var/lib/sendmail&quot;,
+               &quot;uid&quot;: 117,
+               &quot;shell&quot;: &quot;/bin/false&quot;
+             },
+             &quot;speech-dispatcher&quot;: {
+               &quot;gecos&quot;: &quot;Speech Dispatcher,,,&quot;,
+               &quot;gid&quot;: 29,
+               &quot;dir&quot;: &quot;/var/run/speech-dispatcher&quot;,
+               &quot;uid&quot;: 107,
+               &quot;shell&quot;: &quot;/bin/sh&quot;
+             },
+             &quot;bin&quot;: {
+               &quot;gecos&quot;: &quot;bin&quot;,
+               &quot;gid&quot;: 2,
+               &quot;dir&quot;: &quot;/bin&quot;,
+               &quot;uid&quot;: 2,
+               &quot;shell&quot;: &quot;/bin/sh&quot;
+             },
+             &quot;news&quot;: {
+               &quot;gecos&quot;: &quot;news&quot;,
+               &quot;gid&quot;: 9,
+               &quot;dir&quot;: &quot;/var/spool/news&quot;,
+               &quot;uid&quot;: 9,
+               &quot;shell&quot;: &quot;/bin/sh&quot;
+             },
+             &quot;daemon&quot;: {
+               &quot;gecos&quot;: &quot;daemon&quot;,
+               &quot;gid&quot;: 1,
+               &quot;dir&quot;: &quot;/usr/sbin&quot;,
+               &quot;uid&quot;: 1,
+               &quot;shell&quot;: &quot;/bin/sh&quot;
+             },
+             &quot;hdfs&quot;: {
+               &quot;gecos&quot;: &quot;Hadoop HDFS,,,&quot;,
+               &quot;gid&quot;: 133,
+               &quot;dir&quot;: &quot;/usr/lib/hadoop-0.20&quot;,
+               &quot;uid&quot;: 124,
+               &quot;shell&quot;: &quot;/bin/bash&quot;
+             },
+             &quot;redis&quot;: {
+               &quot;gecos&quot;: &quot;redis server,,,&quot;,
+               &quot;gid&quot;: 128,
+               &quot;dir&quot;: &quot;/var/lib/redis&quot;,
+               &quot;uid&quot;: 120,
+               &quot;shell&quot;: &quot;/bin/false&quot;
+             },
+             &quot;gnats&quot;: {
+               &quot;gecos&quot;: &quot;Gnats Bug-Reporting System (admin)&quot;,
+               &quot;gid&quot;: 41,
+               &quot;dir&quot;: &quot;/var/lib/gnats&quot;,
+               &quot;uid&quot;: 41,
+               &quot;shell&quot;: &quot;/bin/sh&quot;
+             },
+             &quot;rabbitmq&quot;: {
+               &quot;gecos&quot;: &quot;RabbitMQ messaging server,,,&quot;,
+               &quot;gid&quot;: 130,
+               &quot;dir&quot;: &quot;/var/lib/rabbitmq&quot;,
+               &quot;uid&quot;: 122,
+               &quot;shell&quot;: &quot;/bin/false&quot;
+             },
+             &quot;jetty&quot;: {
+               &quot;gecos&quot;: &quot;&quot;,
+               &quot;gid&quot;: 129,
+               &quot;dir&quot;: &quot;/usr/share/jetty&quot;,
+               &quot;uid&quot;: 121,
+               &quot;shell&quot;: &quot;/bin/false&quot;
+             },
+             &quot;ntp&quot;: {
+               &quot;gecos&quot;: &quot;&quot;,
+               &quot;gid&quot;: 127,
+               &quot;dir&quot;: &quot;/home/ntp&quot;,
+               &quot;uid&quot;: 119,
+               &quot;shell&quot;: &quot;/bin/false&quot;
+             }
+           }
+         },
+         &quot;macaddress&quot;: &quot;c0:cb:38:59:3a:54&quot;,
+         &quot;block_device&quot;: {
+           &quot;ram13&quot;: {
+             &quot;size&quot;: &quot;131072&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;ram0&quot;: {
+             &quot;size&quot;: &quot;131072&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;loop0&quot;: {
+             &quot;size&quot;: &quot;0&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;ram14&quot;: {
+             &quot;size&quot;: &quot;131072&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;ram1&quot;: {
+             &quot;size&quot;: &quot;131072&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;loop1&quot;: {
+             &quot;size&quot;: &quot;0&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;ram15&quot;: {
+             &quot;size&quot;: &quot;131072&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;ram2&quot;: {
+             &quot;size&quot;: &quot;131072&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;loop2&quot;: {
+             &quot;size&quot;: &quot;0&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;ram3&quot;: {
+             &quot;size&quot;: &quot;131072&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;loop3&quot;: {
+             &quot;size&quot;: &quot;0&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;ram4&quot;: {
+             &quot;size&quot;: &quot;131072&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;sda&quot;: {
+             &quot;model&quot;: &quot;ST3750528AS&quot;,
+             &quot;size&quot;: &quot;1465149168&quot;,
+             &quot;timeout&quot;: &quot;30&quot;,
+             &quot;rev&quot;: &quot;CC46&quot;,
+             &quot;removable&quot;: &quot;0&quot;,
+             &quot;vendor&quot;: &quot;ATA&quot;,
+             &quot;state&quot;: &quot;running&quot;
+           },
+           &quot;loop4&quot;: {
+             &quot;size&quot;: &quot;0&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;ram5&quot;: {
+             &quot;size&quot;: &quot;131072&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;sdb&quot;: {
+             &quot;model&quot;: &quot;SD/MMC&quot;,
+             &quot;size&quot;: &quot;0&quot;,
+             &quot;timeout&quot;: &quot;30&quot;,
+             &quot;rev&quot;: &quot;1.00&quot;,
+             &quot;removable&quot;: &quot;1&quot;,
+             &quot;vendor&quot;: &quot;Generic-&quot;,
+             &quot;state&quot;: &quot;running&quot;
+           },
+           &quot;sr0&quot;: {
+             &quot;model&quot;: &quot;DVD+-RW TS-H653H&quot;,
+             &quot;size&quot;: &quot;2097151&quot;,
+             &quot;timeout&quot;: &quot;30&quot;,
+             &quot;rev&quot;: &quot;D400&quot;,
+             &quot;removable&quot;: &quot;1&quot;,
+             &quot;vendor&quot;: &quot;TSSTcorp&quot;,
+             &quot;state&quot;: &quot;running&quot;
+           },
+           &quot;loop5&quot;: {
+             &quot;size&quot;: &quot;0&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;ram6&quot;: {
+             &quot;size&quot;: &quot;131072&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;sdc&quot;: {
+             &quot;model&quot;: &quot;Compact Flash&quot;,
+             &quot;size&quot;: &quot;0&quot;,
+             &quot;timeout&quot;: &quot;30&quot;,
+             &quot;rev&quot;: &quot;1.01&quot;,
+             &quot;removable&quot;: &quot;1&quot;,
+             &quot;vendor&quot;: &quot;Generic-&quot;,
+             &quot;state&quot;: &quot;running&quot;
+           },
+           &quot;loop6&quot;: {
+             &quot;size&quot;: &quot;0&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;ram10&quot;: {
+             &quot;size&quot;: &quot;131072&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;ram7&quot;: {
+             &quot;size&quot;: &quot;131072&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;sdd&quot;: {
+             &quot;model&quot;: &quot;SM/xD-Picture&quot;,
+             &quot;size&quot;: &quot;0&quot;,
+             &quot;timeout&quot;: &quot;30&quot;,
+             &quot;rev&quot;: &quot;1.02&quot;,
+             &quot;removable&quot;: &quot;1&quot;,
+             &quot;vendor&quot;: &quot;Generic-&quot;,
+             &quot;state&quot;: &quot;running&quot;
+           },
+           &quot;loop7&quot;: {
+             &quot;size&quot;: &quot;0&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;ram11&quot;: {
+             &quot;size&quot;: &quot;131072&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;ram8&quot;: {
+             &quot;size&quot;: &quot;131072&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;sde&quot;: {
+             &quot;model&quot;: &quot;MS/MS-Pro&quot;,
+             &quot;size&quot;: &quot;0&quot;,
+             &quot;timeout&quot;: &quot;30&quot;,
+             &quot;rev&quot;: &quot;1.03&quot;,
+             &quot;removable&quot;: &quot;1&quot;,
+             &quot;vendor&quot;: &quot;Generic-&quot;,
+             &quot;state&quot;: &quot;running&quot;
+           },
+           &quot;ram12&quot;: {
+             &quot;size&quot;: &quot;131072&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;ram9&quot;: {
+             &quot;size&quot;: &quot;131072&quot;,
+             &quot;removable&quot;: &quot;0&quot;
+           },
+           &quot;sdf&quot;: {
+             &quot;model&quot;: &quot;Ultra HS-SD/MMC&quot;,
+             &quot;size&quot;: &quot;0&quot;,
+             &quot;timeout&quot;: &quot;30&quot;,
+             &quot;rev&quot;: &quot;1.91&quot;,
+             &quot;removable&quot;: &quot;1&quot;,
+             &quot;vendor&quot;: &quot;Generic&quot;,
+             &quot;state&quot;: &quot;running&quot;
+           }
+         },
+         &quot;uptime_seconds&quot;: 1047322,
+         &quot;platform&quot;: &quot;ubuntu&quot;
+       },
+       &quot;run_list&quot;: [
+         &quot;role[sun-java]&quot;,
+         &quot;recipe[hadoop]&quot;
+       ],
+       &quot;chef_type&quot;: &quot;node&quot;
+     }
+</pre>
+</body>

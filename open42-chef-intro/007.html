@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>007</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "006" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "008.json" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                          Chef Model: Node
+     
+     A Node is an client instance that is managed by Chef.
+     
+     * has a run-list containing recipies and roles to apply
+     * has metadata defined on server (via knife)
+     * has metadata about current system status (collected via ohai)
+       * installed chef packages, recipies, roles
+       * stats on: kernel rev, cpu flags, os, virtualization, uptime, name, fqdn, 
+         ip, filesystem, memory, installed languages, users, groups, ...
+</pre>
+</body>

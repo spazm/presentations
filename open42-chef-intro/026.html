@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>026</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "025" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "027.rb" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                       Chef Model: resources
+     
+     Chef manages Resources on the node. 
+     
+     Resources can be many things:
+       * packages
+       * services
+       * users
+       * files
+       * directories
+       * And more. 
+     
+     * They are the &quot;bread and butter of recipes.&quot;
+     * Configured by providers based on the platform of the node
+     
+     http://wiki.opscode.com/display/chef/Resources
+</pre>
+</body>

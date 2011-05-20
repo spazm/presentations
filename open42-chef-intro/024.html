@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>024</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "023" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "025" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                        Chef Model: recipies
+     
+     Applied to the run-list of a node or role.
+     e.g.
+         { run_list : [
+             &quot;recipe[apache2]&quot;,
+             &quot;recipe[apache2::mod_ssl]&quot;,
+         ]}
+     
+     Apply to node:
+       % knife node run_list add MYNODE &quot;recipe[apache2]&quot;
+</pre>
+</body>

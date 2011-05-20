@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>017</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "016" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "018" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                       Chef Model: attributes
+     
+     &quot;Attributes that are values on Node to set default values used elsewhere in the cookbook.&quot;
+     http://wiki.opscode.com/display/chef/Attributes
+     
+     &quot;Attributes are Node data such as the IP address, hostname, loaded kernel modules, 
+      version of programming languages available on the system and more. 
+      New attributes can be dynamically added to the node in a variety of ways.&quot;
+     
+     Good candidates for Attributes are:
+      * Cross-Platform abstractions for an application such as the path to a config file.
+      * Default values for &quot;tunable&quot; settings ( memory assigned, worker spawn count)
+      * Anything else you may want to persist (in node data) between Chef runs.
+</pre>
+</body>

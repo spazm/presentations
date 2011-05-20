@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>018</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "017" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "019.rb" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                       Chef Model: attributes
+     
+     * nested configuration data for the cookbook.
+     * override in a recipie, role, node or databag.
+     * written as Ruby &quot;mash&quot; (hash where key can be ruby value [ :key ] or string [ &quot;string&quot; ] )
+     
+     Can be set on a node at 4 levels of precedence:
+       * cookbooks
+       * environments (Chef 0.10.0 and above)
+       * roles
+       * nodes
+     4 levels of gradiation: 
+       * automatic    -- internal ohai data, can't override or change.
+       * override     -- role specific override 
+       * normal       -- node specific override, json file override,
+       * default      -- write cookbooks at this level
+</pre>
+</body>

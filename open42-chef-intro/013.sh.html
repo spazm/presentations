@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>013.sh</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "012.sh" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "014" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                             Chef Model: Client/server : bootstrapping
+     
+     % knife bootstrap --help                                                                                                                        10 ~
+     knife bootstrap FQDN [RUN LIST...] (options)
+         -N, --node-name NAME             The Chef node name for your new node
+         -s, --server-url URL             Chef Server URL
+         -k, --key KEY                    API Client Key
+         -c, --config CONFIG              The configuration file to use
+             --defaults                   Accept default values for all questions
+         -d, --distro DISTRO              Bootstrap a distro using a template
+         -e, --editor EDITOR              Set the editor to use for interactive commands
+         -F, --format FORMAT              Which format to use for output
+         -i IDENTITY_FILE                 The SSH identity file used for authentication
+             --identity-file
+         -l, --log_level LEVEL            Set the log level (debug, info, warn, error, fatal)
+         -L, --logfile LOGLOCATION        Set the log file location, defaults to STDOUT
+         -n, --no-editor                  Do not open EDITOR, just accept the data as is
+         -u, --user USER                  API Client Username
+             --prerelease                 Install the pre-release chef gems
+         -p, --print-after                Show the data after a destructive operation
+         -r, --run-list RUN_LIST          Comma separated list of roles/recipes to apply
+         -P, --ssh-password PASSWORD      The ssh password
+         -x, --ssh-user USERNAME          The ssh username
+             --template-file TEMPLATE     Full path to location of template to use
+             --sudo                       Execute the bootstrap via sudo
+         -v, --version                    Show chef version
+         -y, --yes                        Say yes to all prompts for confirmation
+         -h, --help                       Show this message
+</pre>
+</body>

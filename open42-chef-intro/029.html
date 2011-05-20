@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>029</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "028" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "030" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                       Chef Model: providers
+     
+     For example, given a resource such as:
+     
+       directory &quot;/tmp/monkey&quot; do
+         owner &quot;root&quot;
+         group &quot;root&quot;
+         mode 0755
+         action :create
+       end
+     
+     This would:
+     * Look up the provider for a directory resource: Chef::Provider::Directory
+     * Call load_current_resource, which creates a new directory[&quot;/tmp/monkey&quot;] resource, 
+       based on the directories current state (which goes in @current_resource).
+     * Call action_create, which is responsible making sure the directory exists, 
+       and that it's attributes are correct.
+     * If we changed the directory in any way, we mark the resource as updated.
+</pre>
+</body>

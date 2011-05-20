@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>021</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "020" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "022" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                         Chef Model: files
+     
+     &quot;Files that will be placed on the client verbatim.&quot;
+     http://wiki.opscode.com/display/chef/Files
+     
+     * referenced with 'cookbook_file' resource.
+     * File Specifity
+       * files/ and templates/ dir can have subdirs that match on 
+         platform, host, etc.
+     
+     e.g.
+     
+     cookbook_file &quot;/usr/local/bin/apache2_module_conf_generate.pl&quot; do
+       source &quot;apache2_module_conf_generate.pl&quot;
+       mode 0755
+       owner &quot;root&quot;
+       group &quot;root&quot;
+     end
+     
+     files/     #listed in matching order from most to least specific.
+       host-example.com
+       ubuntu-10.10
+       ubuntu
+       default
+</pre>
+</body>
