@@ -27,8 +27,173 @@ App::Web::SimpleWeather
 aka
 Dancer, Plack and Friends!
 
+
 by Andrew Grangaard (spazm)
 
 (hint: press the spacebar)
+----
+
+  Los
+  Angeles
+  Perl Mongers
+  D
+  a
+  n
+  c
+  e
+  r
+
+----
+== What is Dancer?
+
+----
+== Why Dancer? Why another framework?
+
+----
+== Example: SimpleWeather
+
+Mini-site to give simplistic representation of current weather.
+----
+== Example: SimpleWeather
+== plan
+
+1 find a weather module
+2 build a dancer framework around it
+3 
+4 profit!?
+
+---- shell
+== Example: SimpleWeather
+== find a weather module
+  Several available on CPAN: Weather::com::*, Weather::Bug::*, Weather::Yahoo,
+  * Weather::Google, picked because it is simple, not much data returned.
+    Unexpected bonus: includes image links to serve via google.
+
++% cpanm --sudo Weather::Google
+--> Working on Weather::Google
+Fetching http://search.cpan.org/CPAN/authors/id/P/PO/POSSUM/Weather-Google-0.05.tar.gz ... OK
+Configuring Weather-Google-0.05 ... OK
+Building and testing Weather-Google-0.05 ... OK
+Successfully installed Weather-Google-0.05
+1 distribution installed
+---- perl
+== Find a weather module
+== Check the API:
+
+% perl -MData::Dumper -MWeather::Google -e \
+  'my $gw=Weather::Google->new(); $gw->zip(90405); print Dumper $gw->current'
+    $VAR1 = {
+        'icon'           => '/ig/images/weather/sunny.gif',
+        'temp_f'         => '64',
+        'temp_c'         => '18',
+        'wind_condition' => 'Wind: W at 10 mph',
+        'humidity'       => 'Humidity: 55%',
+        'condition'      => 'Sunny'
+    };
+
+---- shell
+== Build a dancer framework around it
+== initialize module and version control
+
+% dzil new App::Web::SimpleWeather
+[DZ] making target dir /Users/andrew/src/App-Web-SimpleWeather
+[DZ] writing files to /Users/andrew/src/App-Web-SimpleWeather
+[DZ] dist minted in ./App-Web-SimpleWeather
+
++% find App-Web-SimpleWeather
+App-Web-SimpleWeather
+App-Web-SimpleWeather/dist.ini
+App-Web-SimpleWeather/lib
+App-Web-SimpleWeather/lib/App
+App-Web-SimpleWeather/lib/App/Web
+App-Web-SimpleWeather/lib/App/Web/SimpleWeather.pm
+
++% mv App-Web-SimpleWeather p5-app-web-simpleweather
+ % cd p5-app-web-simpleweather
+ % git init
+ % git commit -m "initial commit"
+
+---- shell
+== Build a dancer framework around it
+== Make it dance
+
+edit lib/Web/App/SimpleWeather.pm
+
+---- perl
+#first pass
+package App::Web::SimpleWeather;
+
+use Dancer;
+use Weather::Google;
+
+my $gw = Weather::Google->new();
+
+get '/:name_or_zip' => sub {
+    $gw->zip( params->{name_or_zip} );
+    my $forecast = $gw->current();
+    $forecast->{ location } = params->{name_or_zip};
+
+    #template 'weather' => { f => $forecast };
+    return to_dumper $forecast;
+};                                                                              
+1;
+---- perl
+== #second pass: over-comment
+package App::Web::SimpleWeather;
+
+use Dancer;            #<-- implicitly includes use strict; use warnings;
+use Weather::Google;   #<-- our weather module
+
+my $gw = Weather::Google->new();  #<-- initialize weather object
+
+#route definitions
+get '/:name_or_zip' => sub {  
+#^^  ^^^^^^^^^^^^^     ^^^
+# |         |            +- anonymous sub to be called when this route matches
+# |         +- ':' defines a wild-card match that will be stored in 'params'
+# +- http verb: get, post, head, any.  Imported by 'use Dancer'
+
+    $gw->zip( params->{name_or_zip} );
+   #$gw->zip( params('name_or_zip') );
+   #          ^^^^^^<- bound path params can be accessed via params function
+   #                <- by hash or sub #params('name_or_zip')
+
+    my $forecast = $gw->current();
+    $forecast->{ location } = params->{name_or_zip};
+    
+    #call weather template with forecast bound to f
+    #template 'weather' => { f => $forecast };
+    return to_dumper $forecast; #<-- dump output for testing framework.
+};                                                                              
+1;
+----
+== Create Support files
+  bin/app.pl
+  config.yml
+  environments/
+    development.yml
+    production.yml
+  public/...
+  t/...
+  views/
+    layouts/
+      main.tt
+    weather.tt
+
+---- perl
+== bin/app.pl
+---- include p5-app-web-simpleweather/bin/app.pl
+
+---- perl
+== config.yml
+---- include p5-app-web-simpleweather/config.yml
+
+---- html
+== views/weather.tt
+---- include p5-app-web-simpleweather/views/weather.tt
+
+---- html
+== views/layouts/main.tt
+---- include p5-app-web-simpleweather/views/layouts/main.tt
 
 ----
